@@ -45,7 +45,7 @@ DEFAULT_PAGINATION = 10
 MARKUP = ('md', 'ipynb')
 
 PLUGIN_PATH = './plugins'
-PLUGINS = ['ipynb.markup']
+PLUGINS = ['ipynb.markup', 'representative_image']
 
 # pelican will ignore ipynb checkpoints
 IGNORE_FILES = ['.ipynb_checkpoints']
@@ -53,6 +53,8 @@ IGNORE_FILES = ['.ipynb_checkpoints']
 # import pelican-theme
 THEME = "../pelican-themes/gum"
 
+
 # THEME = 'themes/bootstrap2'
+
 OUTPUT_PATH = 'output'
 PATH = 'content'
