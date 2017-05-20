@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Datalogues - posts</title><link href="/" rel="alternate"></link><link href="/feeds/posts.atom.xml" rel="self"></link><id>/</id><updated>2017-05-20T20:00:00-04:00</updated><entry><title>Hello</title><link href="/hello-post.html" rel="alternate"></link><published>2017-05-20T20:00:00-04:00</published><updated>2017-05-20T20:00:00-04:00</updated><author><name>Monica Powell</name></author><id>tag:None,2017-05-20:/hello-post.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Datalogues - posts</title><link href="https://m0nica.github.io/datalogues/" rel="alternate"></link><link href="https://m0nica.github.io/datalogues/feeds/posts.atom.xml" rel="self"></link><id>https://m0nica.github.io/datalogues/</id><updated>2017-05-20T20:00:00-04:00</updated><entry><title>Hello</title><link href="https://m0nica.github.io/datalogues/hello-post.html" rel="alternate"></link><published>2017-05-20T20:00:00-04:00</published><updated>2017-05-20T20:00:00-04:00</updated><author><name>Monica Powell</name></author><id>tag:m0nica.github.io,2017-05-20:/datalogues/hello-post.html</id><summary type="html">
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
 &lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
@@ -1169,7 +1169,7 @@ RU5ErkJggg==
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="python firsts"></category></entry><entry><title>Importing a CSV into Pandas</title><link href="/import-csv-pandas.html" rel="alternate"></link><published>2017-05-20T10:30:00-04:00</published><updated>2017-05-20T10:30:00-04:00</updated><author><name>Monica Powell</name></author><id>tag:None,2017-05-20:/import-csv-pandas.html</id><summary type="html">
+</content><category term="python firsts"></category></entry><entry><title>Importing a CSV into Pandas</title><link href="https://m0nica.github.io/datalogues/import-csv-pandas.html" rel="alternate"></link><published>2017-05-20T10:30:00-04:00</published><updated>2017-05-20T10:30:00-04:00</updated><author><name>Monica Powell</name></author><id>tag:m0nica.github.io,2017-05-20:/datalogues/import-csv-pandas.html</id><summary type="html">
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
 &lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
