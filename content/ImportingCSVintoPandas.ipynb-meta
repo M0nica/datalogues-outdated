@@ -1,7 +1,7 @@
 Title: Importing a CSV into Pandas
 Slug: import-csv-pandas
 Date: 2017-05-20 10:30
-Category: posts
+Category: snippets
 Tags: python firsts
 Author: Monica Powell
-Summary: Using pelican, jupyter notebook to start a blog.
+Summary: A quick guide to importing data into Pandas.
