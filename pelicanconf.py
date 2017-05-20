@@ -50,7 +50,7 @@ PLUGINS = ['ipynb.markup']
 IGNORE_FILES = ['.ipynb_checkpoints']
 
 # import pelican-theme
-# THEME = "../pelican-themes/gum"
+THEME = "../pelican-themes/gum"
 
 # THEME = 'themes/bootstrap2'
 OUTPUT_PATH = 'output'
