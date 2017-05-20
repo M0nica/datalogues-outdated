@@ -1,1008 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="utf-8" />
-        <title>Datalogues - python firsts</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
 
-        <!--[if IE]>
-            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+        <title>Datalogues - python firsts</title>
+        <meta charset="utf-8" />
+
+
+        <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+        <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+
+        <link rel="stylesheet" type="text/css" href="/theme/gumby.css" />
+        <link rel="stylesheet" type="text/css" href="/theme/style.css" />
+        <link rel="stylesheet" type="text/css" href="/theme/pygment.css" />
+
+        <script src="/theme/js/libs/modernizr-2.6.2.min.js"></script>
+
+
+
+
 </head>
 
 <body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">Datalogues </a></h1>
-                <nav><ul>
-                    <li><a href="/category/posts.html">posts</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="/hello-post.html">Hello</a></h1>
-<footer class="post-info">
-        <abbr class="published" title="2017-05-20T20:00:00-04:00">
-                Published: Sat 20 May 2017
-        </abbr>
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/monica-powell.html">Monica Powell</a>
-        </address>
-<p>In <a href="/category/posts.html">posts</a>.</p>
-<p>tags: <a href="/tag/python-firsts.html">python firsts</a> </p>
-</footer><!-- /.post-info --><style type="text/css">/*!
-*
-* IPython notebook
-*
-*/
-/* CSS font colors for translated ANSI colors. */
-.ansibold {
-  font-weight: bold;
-}
-/* use dark versions for foreground, to improve visibility */
-.ansiblack {
-  color: black;
-}
-.ansired {
-  color: darkred;
-}
-.ansigreen {
-  color: darkgreen;
-}
-.ansiyellow {
-  color: #c4a000;
-}
-.ansiblue {
-  color: darkblue;
-}
-.ansipurple {
-  color: darkviolet;
-}
-.ansicyan {
-  color: steelblue;
-}
-.ansigray {
-  color: gray;
-}
-/* and light for background, for the same reason */
-.ansibgblack {
-  background-color: black;
-}
-.ansibgred {
-  background-color: red;
-}
-.ansibggreen {
-  background-color: green;
-}
-.ansibgyellow {
-  background-color: yellow;
-}
-.ansibgblue {
-  background-color: blue;
-}
-.ansibgpurple {
-  background-color: magenta;
-}
-.ansibgcyan {
-  background-color: cyan;
-}
-.ansibggray {
-  background-color: gray;
-}
-div.cell {
-  /* Old browsers */
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-box-align: stretch;
-  display: -moz-box;
-  -moz-box-orient: vertical;
-  -moz-box-align: stretch;
-  display: box;
-  box-orient: vertical;
-  box-align: stretch;
-  /* Modern browsers */
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  border-radius: 2px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  border-width: 1px;
-  border-style: solid;
-  border-color: transparent;
-  width: 100%;
-  padding: 5px;
-  /* This acts as a spacer between cells, that is outside the border */
-  margin: 0px;
-  outline: none;
-  border-left-width: 1px;
-  padding-left: 5px;
-  background: linear-gradient(to right, transparent -40px, transparent 1px, transparent 1px, transparent 100%);
-}
-div.cell.jupyter-soft-selected {
-  border-left-color: #90CAF9;
-  border-left-color: #E3F2FD;
-  border-left-width: 1px;
-  padding-left: 5px;
-  border-right-color: #E3F2FD;
-  border-right-width: 1px;
-  background: #E3F2FD;
-}
-@media print {
-  div.cell.jupyter-soft-selected {
-    border-color: transparent;
-  }
-}
-div.cell.selected {
-  border-color: #ababab;
-  border-left-width: 0px;
-  padding-left: 6px;
-  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 5px, transparent 5px, transparent 100%);
-}
-@media print {
-  div.cell.selected {
-    border-color: transparent;
-  }
-}
-div.cell.selected.jupyter-soft-selected {
-  border-left-width: 0;
-  padding-left: 6px;
-  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 7px, #E3F2FD 7px, #E3F2FD 100%);
-}
-.edit_mode div.cell.selected {
-  border-color: #66BB6A;
-  border-left-width: 0px;
-  padding-left: 6px;
-  background: linear-gradient(to right, #66BB6A -40px, #66BB6A 5px, transparent 5px, transparent 100%);
-}
-@media print {
-  .edit_mode div.cell.selected {
-    border-color: transparent;
-  }
-}
-.prompt {
-  /* This needs to be wide enough for 3 digit prompt numbers: In[100]: */
-  min-width: 14ex;
-  /* This padding is tuned to match the padding on the CodeMirror editor. */
-  padding: 0.4em;
-  margin: 0px;
-  font-family: monospace;
-  text-align: right;
-  /* This has to match that of the the CodeMirror class line-height below */
-  line-height: 1.21429em;
-  /* Don't highlight prompt number selection */
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  /* Use default cursor */
-  cursor: default;
-}
-@media (max-width: 540px) {
-  .prompt {
-    text-align: left;
-  }
-}
-div.inner_cell {
-  min-width: 0;
-  /* Old browsers */
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-box-align: stretch;
-  display: -moz-box;
-  -moz-box-orient: vertical;
-  -moz-box-align: stretch;
-  display: box;
-  box-orient: vertical;
-  box-align: stretch;
-  /* Modern browsers */
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  /* Old browsers */
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  box-flex: 1;
-  /* Modern browsers */
-  flex: 1;
-}
-/* input_area and input_prompt must match in top border and margin for alignment */
-div.input_area {
-  border: 1px solid #cfcfcf;
-  border-radius: 2px;
-  background: #f7f7f7;
-  line-height: 1.21429em;
-}
-/* This is needed so that empty prompt areas can collapse to zero height when there
-   is no content in the output_subarea and the prompt. The main purpose of this is
-   to make sure that empty JavaScript output_subareas have no height. */
-div.prompt:empty {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-div.unrecognized_cell {
-  padding: 5px 5px 5px 0px;
-  /* Old browsers */
-  display: -webkit-box;
-  -webkit-box-orient: horizontal;
-  -webkit-box-align: stretch;
-  display: -moz-box;
-  -moz-box-orient: horizontal;
-  -moz-box-align: stretch;
-  display: box;
-  box-orient: horizontal;
-  box-align: stretch;
-  /* Modern browsers */
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-}
-div.unrecognized_cell .inner_cell {
-  border-radius: 2px;
-  padding: 5px;
-  font-weight: bold;
-  color: red;
-  border: 1px solid #cfcfcf;
-  background: #eaeaea;
-}
-div.unrecognized_cell .inner_cell a {
-  color: inherit;
-  text-decoration: none;
-}
-div.unrecognized_cell .inner_cell a:hover {
-  color: inherit;
-  text-decoration: none;
-}
-@media (max-width: 540px) {
-  div.unrecognized_cell > div.prompt {
-    display: none;
-  }
-}
-div.code_cell {
-  /* avoid page breaking on code cells when printing */
-}
-@media print {
-  div.code_cell {
-    page-break-inside: avoid;
-  }
-}
-/* any special styling for code cells that are currently running goes here */
-div.input {
-  page-break-inside: avoid;
-  /* Old browsers */
-  display: -webkit-box;
-  -webkit-box-orient: horizontal;
-  -webkit-box-align: stretch;
-  display: -moz-box;
-  -moz-box-orient: horizontal;
-  -moz-box-align: stretch;
-  display: box;
-  box-orient: horizontal;
-  box-align: stretch;
-  /* Modern browsers */
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-}
-@media (max-width: 540px) {
-  div.input {
-    /* Old browsers */
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-box-align: stretch;
-    display: -moz-box;
-    -moz-box-orient: vertical;
-    -moz-box-align: stretch;
-    display: box;
-    box-orient: vertical;
-    box-align: stretch;
-    /* Modern browsers */
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-  }
-}
-/* input_area and input_prompt must match in top border and margin for alignment */
-div.input_prompt {
-  color: #303F9F;
-  border-top: 1px solid transparent;
-}
-div.input_area > div.highlight {
-  margin: 0.4em;
-  border: none;
-  padding: 0px;
-  background-color: transparent;
-}
-div.input_area > div.highlight > pre {
-  margin: 0px;
-  border: none;
-  padding: 0px;
-  background-color: transparent;
-}
-/* The following gets added to the <head> if it is detected that the user has a
- * monospace font with inconsistent normal/bold/italic height.  See
- * notebookmain.js.  Such fonts will have keywords vertically offset with
- * respect to the rest of the text.  The user should select a better font.
- * See: https://github.com/ipython/ipython/issues/1503
- *
- * .CodeMirror span {
- *      vertical-align: bottom;
- * }
- */
-.CodeMirror {
-  line-height: 1.21429em;
-  /* Changed from 1em to our global default */
-  font-size: 14px;
-  height: auto;
-  /* Changed to auto to autogrow */
-  background: none;
-  /* Changed from white to allow our bg to show through */
-}
-.CodeMirror-scroll {
-  /*  The CodeMirror docs are a bit fuzzy on if overflow-y should be hidden or visible.*/
-  /*  We have found that if it is visible, vertical scrollbars appear with font size changes.*/
-  overflow-y: hidden;
-  overflow-x: auto;
-}
-.CodeMirror-lines {
-  /* In CM2, this used to be 0.4em, but in CM3 it went to 4px. We need the em value because */
-  /* we have set a different line-height and want this to scale with that. */
-  padding: 0.4em;
-}
-.CodeMirror-linenumber {
-  padding: 0 8px 0 4px;
-}
-.CodeMirror-gutters {
-  border-bottom-left-radius: 2px;
-  border-top-left-radius: 2px;
-}
-.CodeMirror pre {
-  /* In CM3 this went to 4px from 0 in CM2. We need the 0 value because of how we size */
-  /* .CodeMirror-lines */
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-}
-/*
+    <div class="container">
 
-Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
-Adapted from GitHub theme
+        <div class="row">
 
-*/
-.highlight-base {
-  color: #000;
-}
-.highlight-variable {
-  color: #000;
-}
-.highlight-variable-2 {
-  color: #1a1a1a;
-}
-.highlight-variable-3 {
-  color: #333333;
-}
-.highlight-string {
-  color: #BA2121;
-}
-.highlight-comment {
-  color: #408080;
-  font-style: italic;
-}
-.highlight-number {
-  color: #080;
-}
-.highlight-atom {
-  color: #88F;
-}
-.highlight-keyword {
-  color: #008000;
-  font-weight: bold;
-}
-.highlight-builtin {
-  color: #008000;
-}
-.highlight-error {
-  color: #f00;
-}
-.highlight-operator {
-  color: #AA22FF;
-  font-weight: bold;
-}
-.highlight-meta {
-  color: #AA22FF;
-}
-/* previously not defined, copying from default codemirror */
-.highlight-def {
-  color: #00f;
-}
-.highlight-string-2 {
-  color: #f50;
-}
-.highlight-qualifier {
-  color: #555;
-}
-.highlight-bracket {
-  color: #997;
-}
-.highlight-tag {
-  color: #170;
-}
-.highlight-attribute {
-  color: #00c;
-}
-.highlight-header {
-  color: blue;
-}
-.highlight-quote {
-  color: #090;
-}
-.highlight-link {
-  color: #00c;
-}
-/* apply the same style to codemirror */
-.cm-s-ipython span.cm-keyword {
-  color: #008000;
-  font-weight: bold;
-}
-.cm-s-ipython span.cm-atom {
-  color: #88F;
-}
-.cm-s-ipython span.cm-number {
-  color: #080;
-}
-.cm-s-ipython span.cm-def {
-  color: #00f;
-}
-.cm-s-ipython span.cm-variable {
-  color: #000;
-}
-.cm-s-ipython span.cm-operator {
-  color: #AA22FF;
-  font-weight: bold;
-}
-.cm-s-ipython span.cm-variable-2 {
-  color: #1a1a1a;
-}
-.cm-s-ipython span.cm-variable-3 {
-  color: #333333;
-}
-.cm-s-ipython span.cm-comment {
-  color: #408080;
-  font-style: italic;
-}
-.cm-s-ipython span.cm-string {
-  color: #BA2121;
-}
-.cm-s-ipython span.cm-string-2 {
-  color: #f50;
-}
-.cm-s-ipython span.cm-meta {
-  color: #AA22FF;
-}
-.cm-s-ipython span.cm-qualifier {
-  color: #555;
-}
-.cm-s-ipython span.cm-builtin {
-  color: #008000;
-}
-.cm-s-ipython span.cm-bracket {
-  color: #997;
-}
-.cm-s-ipython span.cm-tag {
-  color: #170;
-}
-.cm-s-ipython span.cm-attribute {
-  color: #00c;
-}
-.cm-s-ipython span.cm-header {
-  color: blue;
-}
-.cm-s-ipython span.cm-quote {
-  color: #090;
-}
-.cm-s-ipython span.cm-link {
-  color: #00c;
-}
-.cm-s-ipython span.cm-error {
-  color: #f00;
-}
-.cm-s-ipython span.cm-tab {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAMCAYAAAAkuj5RAAAAAXNSR0IArs4c6QAAAGFJREFUSMft1LsRQFAQheHPowAKoACx3IgEKtaEHujDjORSgWTH/ZOdnZOcM/sgk/kFFWY0qV8foQwS4MKBCS3qR6ixBJvElOobYAtivseIE120FaowJPN75GMu8j/LfMwNjh4HUpwg4LUAAAAASUVORK5CYII=);
-  background-position: right;
-  background-repeat: no-repeat;
-}
-div.output_wrapper {
-  /* this position must be relative to enable descendents to be absolute within it */
-  position: relative;
-  /* Old browsers */
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-box-align: stretch;
-  display: -moz-box;
-  -moz-box-orient: vertical;
-  -moz-box-align: stretch;
-  display: box;
-  box-orient: vertical;
-  box-align: stretch;
-  /* Modern browsers */
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  z-index: 1;
-}
-/* class for the output area when it should be height-limited */
-div.output_scroll {
-  /* ideally, this would be max-height, but FF barfs all over that */
-  height: 24em;
-  /* FF needs this *and the wrapper* to specify full width, or it will shrinkwrap */
-  width: 100%;
-  overflow: auto;
-  border-radius: 2px;
-  -webkit-box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
-  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
-  display: block;
-}
-/* output div while it is collapsed */
-div.output_collapsed {
-  margin: 0px;
-  padding: 0px;
-  /* Old browsers */
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-box-align: stretch;
-  display: -moz-box;
-  -moz-box-orient: vertical;
-  -moz-box-align: stretch;
-  display: box;
-  box-orient: vertical;
-  box-align: stretch;
-  /* Modern browsers */
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
-div.out_prompt_overlay {
-  height: 100%;
-  padding: 0px 0.4em;
-  position: absolute;
-  border-radius: 2px;
-}
-div.out_prompt_overlay:hover {
-  /* use inner shadow to get border that is computed the same on WebKit/FF */
-  -webkit-box-shadow: inset 0 0 1px #000;
-  box-shadow: inset 0 0 1px #000;
-  background: rgba(240, 240, 240, 0.5);
-}
-div.output_prompt {
-  color: #D84315;
-}
-/* This class is the outer container of all output sections. */
-div.output_area {
-  padding: 0px;
-  page-break-inside: avoid;
-  /* Old browsers */
-  display: -webkit-box;
-  -webkit-box-orient: horizontal;
-  -webkit-box-align: stretch;
-  display: -moz-box;
-  -moz-box-orient: horizontal;
-  -moz-box-align: stretch;
-  display: box;
-  box-orient: horizontal;
-  box-align: stretch;
-  /* Modern browsers */
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-}
-div.output_area .MathJax_Display {
-  text-align: left !important;
-}
-div.output_area 
-div.output_area 
-div.output_area img,
-div.output_area svg {
-  max-width: 100%;
-  height: auto;
-}
-div.output_area img.unconfined,
-div.output_area svg.unconfined {
-  max-width: none;
-}
-/* This is needed to protect the pre formating from global settings such
-   as that of bootstrap */
-.output {
-  /* Old browsers */
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-box-align: stretch;
-  display: -moz-box;
-  -moz-box-orient: vertical;
-  -moz-box-align: stretch;
-  display: box;
-  box-orient: vertical;
-  box-align: stretch;
-  /* Modern browsers */
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
-@media (max-width: 540px) {
-  div.output_area {
-    /* Old browsers */
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-box-align: stretch;
-    display: -moz-box;
-    -moz-box-orient: vertical;
-    -moz-box-align: stretch;
-    display: box;
-    box-orient: vertical;
-    box-align: stretch;
-    /* Modern browsers */
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-  }
-}
-div.output_area pre {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  vertical-align: baseline;
-  color: black;
-  background-color: transparent;
-  border-radius: 0;
-}
-/* This class is for the output subarea inside the output_area and after
-   the prompt div. */
-div.output_subarea {
-  overflow-x: auto;
-  padding: 0.4em;
-  /* Old browsers */
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  box-flex: 1;
-  /* Modern browsers */
-  flex: 1;
-  max-width: calc(100% - 14ex);
-}
-div.output_scroll div.output_subarea {
-  overflow-x: visible;
-}
-/* The rest of the output_* classes are for special styling of the different
-   output types */
-/* all text output has this class: */
-div.output_text {
-  text-align: left;
-  color: #000;
-  /* This has to match that of the the CodeMirror class line-height below */
-  line-height: 1.21429em;
-}
-/* stdout/stderr are 'text' as well as 'stream', but execute_result/error are *not* streams */
-div.output_stderr {
-  background: #fdd;
-  /* very light red background for stderr */
-}
-div.output_latex {
-  text-align: left;
-}
-/* Empty output_javascript divs should have no height */
-div.output_javascript:empty {
-  padding: 0;
-}
-.js-error {
-  color: darkred;
-}
-/* raw_input styles */
-div.raw_input_container {
-  line-height: 1.21429em;
-  padding-top: 5px;
-}
-pre.raw_input_prompt {
-  /* nothing needed here. */
-}
-input.raw_input {
-  font-family: monospace;
-  font-size: inherit;
-  color: inherit;
-  width: auto;
-  /* make sure input baseline aligns with prompt */
-  vertical-align: baseline;
-  /* padding + margin = 0.5em between prompt and cursor */
-  padding: 0em 0.25em;
-  margin: 0em 0.25em;
-}
-input.raw_input:focus {
-  box-shadow: none;
-}
-p.p-space {
-  margin-bottom: 10px;
-}
-div.output_unrecognized {
-  padding: 5px;
-  font-weight: bold;
-  color: red;
-}
-div.output_unrecognized a {
-  color: inherit;
-  text-decoration: none;
-}
-div.output_unrecognized a:hover {
-  color: inherit;
-  text-decoration: none;
-}
-.rendered_html {
-  color: #000;
-  /* any extras will just be numbers: */
-}
+          <header id="banner" class="body">
+                  <h1><a href="/">Datalogues <strong></strong></a></h1>
+          </header><!-- /#banner -->
+
+            <div id="navigation" class="navbar row">
+              <a href="#" gumby-trigger="#navigation &gt; ul" class="toggle"><i class="icon-menu"></i></a>
+
+              <ul class="columns">
+                <li><a href="/">Home</a></li>
+
+
+              </ul>
+            </div>
+
+<section id="content">
 
 
 
-.rendered_html :link {
-  text-decoration: underline;
-}
-.rendered_html :visited {
-  text-decoration: underline;
-}
+   <div class="row">
 
 
-
-
-
-
-.rendered_html h1:first-child {
-  margin-top: 0.538em;
-}
-.rendered_html h2:first-child {
-  margin-top: 0.636em;
-}
-.rendered_html h3:first-child {
-  margin-top: 0.777em;
-}
-.rendered_html h4:first-child {
-  margin-top: 1em;
-}
-.rendered_html h5:first-child {
-  margin-top: 1em;
-}
-.rendered_html h6:first-child {
-  margin-top: 1em;
-}
-
-
-
-
-
-
-
-
-.rendered_html * + ul {
-  margin-top: 1em;
-}
-.rendered_html * + ol {
-  margin-top: 1em;
-}
-
-
-.rendered_html pre,
-
-
-
-.rendered_html tr,
-.rendered_html th,
-
-.rendered_html td,
-
-
-.rendered_html * + table {
-  margin-top: 1em;
-}
-
-.rendered_html * + p {
-  margin-top: 1em;
-}
-
-.rendered_html * + img {
-  margin-top: 1em;
-}
-.rendered_html img,
-
-.rendered_html img.unconfined,
-
-div.text_cell {
-  /* Old browsers */
-  display: -webkit-box;
-  -webkit-box-orient: horizontal;
-  -webkit-box-align: stretch;
-  display: -moz-box;
-  -moz-box-orient: horizontal;
-  -moz-box-align: stretch;
-  display: box;
-  box-orient: horizontal;
-  box-align: stretch;
-  /* Modern browsers */
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-}
-@media (max-width: 540px) {
-  div.text_cell > div.prompt {
-    display: none;
-  }
-}
-div.text_cell_render {
-  /*font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;*/
-  outline: none;
-  resize: none;
-  width: inherit;
-  border-style: none;
-  padding: 0.5em 0.5em 0.5em 0.4em;
-  color: #000;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
-a.anchor-link:link {
-  text-decoration: none;
-  padding: 0px 20px;
-  visibility: hidden;
-}
-h1:hover .anchor-link,
-h2:hover .anchor-link,
-h3:hover .anchor-link,
-h4:hover .anchor-link,
-h5:hover .anchor-link,
-h6:hover .anchor-link {
-  visibility: visible;
-}
-.text_cell.rendered .input_area {
-  display: none;
-}
-.text_cell.rendered 
-.text_cell.unrendered .text_cell_render {
-  display: none;
-}
-.cm-header-1,
-.cm-header-2,
-.cm-header-3,
-.cm-header-4,
-.cm-header-5,
-.cm-header-6 {
-  font-weight: bold;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-.cm-header-1 {
-  font-size: 185.7%;
-}
-.cm-header-2 {
-  font-size: 157.1%;
-}
-.cm-header-3 {
-  font-size: 128.6%;
-}
-.cm-header-4 {
-  font-size: 110%;
-}
-.cm-header-5 {
-  font-size: 100%;
-  font-style: italic;
-}
-.cm-header-6 {
-  font-size: 100%;
-  font-style: italic;
-}
-</style>
-<style type="text/css">.highlight .hll { background-color: #ffffcc }
-.highlight  { background: #f8f8f8; }
-.highlight .c { color: #408080; font-style: italic } /* Comment */
-.highlight .err { border: 1px solid #FF0000 } /* Error */
-.highlight .k { color: #008000; font-weight: bold } /* Keyword */
-.highlight .o { color: #666666 } /* Operator */
-.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
-.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
-.highlight .cp { color: #BC7A00 } /* Comment.Preproc */
-.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
-.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
-.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
-.highlight .gd { color: #A00000 } /* Generic.Deleted */
-.highlight .ge { font-style: italic } /* Generic.Emph */
-.highlight .gr { color: #FF0000 } /* Generic.Error */
-.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
-.highlight .gi { color: #00A000 } /* Generic.Inserted */
-.highlight .go { color: #888888 } /* Generic.Output */
-.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
-.highlight .gs { font-weight: bold } /* Generic.Strong */
-.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
-.highlight .gt { color: #0044DD } /* Generic.Traceback */
-.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
-.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
-.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
-.highlight .kp { color: #008000 } /* Keyword.Pseudo */
-.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
-.highlight .kt { color: #B00040 } /* Keyword.Type */
-.highlight .m { color: #666666 } /* Literal.Number */
-.highlight .s { color: #BA2121 } /* Literal.String */
-.highlight .na { color: #7D9029 } /* Name.Attribute */
-.highlight .nb { color: #008000 } /* Name.Builtin */
-.highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
-.highlight .no { color: #880000 } /* Name.Constant */
-.highlight .nd { color: #AA22FF } /* Name.Decorator */
-.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
-.highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
-.highlight .nf { color: #0000FF } /* Name.Function */
-.highlight .nl { color: #A0A000 } /* Name.Label */
-.highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
-.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
-.highlight .nv { color: #19177C } /* Name.Variable */
-.highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
-.highlight .w { color: #bbbbbb } /* Text.Whitespace */
-.highlight .mb { color: #666666 } /* Literal.Number.Bin */
-.highlight .mf { color: #666666 } /* Literal.Number.Float */
-.highlight .mh { color: #666666 } /* Literal.Number.Hex */
-.highlight .mi { color: #666666 } /* Literal.Number.Integer */
-.highlight .mo { color: #666666 } /* Literal.Number.Oct */
-.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
-.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
-.highlight .sc { color: #BA2121 } /* Literal.String.Char */
-.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
-.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
-.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
-.highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
-.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
-.highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
-.highlight .sx { color: #008000 } /* Literal.String.Other */
-.highlight .sr { color: #BB6688 } /* Literal.String.Regex */
-.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
-.highlight .ss { color: #19177C } /* Literal.String.Symbol */
-.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
-.highlight .fm { color: #0000FF } /* Name.Function.Magic */
-.highlight .vc { color: #19177C } /* Name.Variable.Class */
-.highlight .vg { color: #19177C } /* Name.Variable.Global */
-.highlight .vi { color: #19177C } /* Name.Variable.Instance */
-.highlight .vm { color: #19177C } /* Name.Variable.Magic */
-.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */</style>
-<style type="text/css">
-/* Temporary definitions which will become obsolete with Notebook release 5.0 */
-.ansi-black-fg { color: #3E424D; }
-.ansi-black-bg { background-color: #3E424D; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #E75C58; }
-.ansi-red-bg { background-color: #E75C58; }
-.ansi-red-intense-fg { color: #B22B31; }
-.ansi-red-intense-bg { background-color: #B22B31; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #DDB62B; }
-.ansi-yellow-bg { background-color: #DDB62B; }
-.ansi-yellow-intense-fg { color: #B27D12; }
-.ansi-yellow-intense-bg { background-color: #B27D12; }
-.ansi-blue-fg { color: #208FFB; }
-.ansi-blue-bg { background-color: #208FFB; }
-.ansi-blue-intense-fg { color: #0065CA; }
-.ansi-blue-intense-bg { background-color: #0065CA; }
-.ansi-magenta-fg { color: #D160C4; }
-.ansi-magenta-bg { background-color: #D160C4; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #60C6C8; }
-.ansi-cyan-bg { background-color: #60C6C8; }
-.ansi-cyan-intense-fg { color: #258F8F; }
-.ansi-cyan-intense-bg { background-color: #258F8F; }
-.ansi-white-fg { color: #C5C1B4; }
-.ansi-white-bg { background-color: #C5C1B4; }
-.ansi-white-intense-fg { color: #A1A6B2; }
-.ansi-white-intense-bg { background-color: #A1A6B2; }
-
-.ansi-bold { font-weight: bold; }
-</style>
+        <div class="eleven columns">
+                 <ol id="post-list">
+                        <li><article class="hentry">
+                                <header> <h2 class="entry-title"><a href="/hello-post.html" rel="bookmark" title="Permalink to Hello">Hello</a></h2> </header>
+                                <footer class="post-info">
+                                    <abbr class="published" title="2017-05-20T20:00:00-04:00"> Sat 20 May 2017 </abbr>
+                                    <address class="vcard author">By 
+                                    <a class="url fn" href="/author/monica-powell.html"> Monica Powell</a>
+                                    </address>
+                                </footer><!-- /.post-info -->
+                                <div class="entry-content"> 
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1014,206 +70,29 @@ h6:hover .anchor-link {
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="input"> </div><!-- /.entry-content -->
 
-<span class="o">%</span><span class="k">matplotlib</span> inline
-
-<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[2]:</div>
+                                <div class="medium primary btn"><a href="/hello-post.html" rel="bookmark" title="Permalink to Hello">Read more <i class="icon-arrow-right"></i></a></div>
 
 
 
-<div class="output_text output_subarea output_execute_result">
-<pre>(array([ 2.,  1.,  1.,  0.,  2.,  0.,  1.,  0.,  0.,  2.]),
- array([  1. ,   1.9,   2.8,   3.7,   4.6,   5.5,   6.4,   7.3,   8.2,
-          9.1,  10. ]),
- &lt;a list of 10 Patch objects&gt;)</pre>
-</div>
-
-</div>
-
-<div class="output_area">
-<div class="prompt"></div>
+                                <div class="row tag-row">
+                                        <span>Tagged as : </span>
+                                            <a class="danger label" href="/tag/python-firsts.html">python firsts</a>
+                                </div>
 
 
 
-<div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
-RU5ErkJggg==
-">
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
- 
-
-
-<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = '//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: 'center'," +
-        "    displayIndent: '0em'," +
-        "    showMathMenu: true," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['$','$'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        " linebreaks: { automatic: true, width: '95% container' }, " +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
-        "    } " +
-        "}); ";
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-</script>
-                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/import-csv-pandas.html" rel="bookmark"
-                           title="Permalink to Importing a CSV into Pandas">Importing a CSV into Pandas</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2017-05-20T10:30:00-04:00">
-                Published: Sat 20 May 2017
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/monica-powell.html">Monica Powell</a>
-        </address>
-<p>In <a href="/category/posts.html">posts</a>.</p>
-<p>tags: <a href="/tag/python-firsts.html">python firsts</a> </p>
-</footer><!-- /.post-info -->                
+                        </article></li>
+                        <li><article class="hentry">
+                                <header> <h2 class="entry-title"><a href="/import-csv-pandas.html" rel="bookmark" title="Permalink to Importing a CSV into Pandas">Importing a CSV into Pandas</a></h2> </header>
+                                <footer class="post-info">
+                                    <abbr class="published" title="2017-05-20T10:30:00-04:00"> Sat 20 May 2017 </abbr>
+                                    <address class="vcard author">By 
+                                    <a class="url fn" href="/author/monica-powell.html"> Monica Powell</a>
+                                    </address>
+                                </footer><!-- /.post-info -->
+                                <div class="entry-content"> 
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1225,40 +104,92 @@ RU5ErkJggg==
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-                <a class="readmore" href="/import-csv-pandas.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
+<div class="input"> </div><!-- /.entry-content -->
+
+                                <div class="medium primary btn"><a href="/import-csv-pandas.html" rel="bookmark" title="Permalink to Importing a CSV into Pandas">Read more <i class="icon-arrow-right"></i></a></div>
+
+
+
+                                <div class="row tag-row">
+                                        <span>Tagged as : </span>
+                                            <a class="danger label" href="/tag/python-firsts.html">python firsts</a>
+                                </div>
+
+
+
+                        </article></li>
                 </ol><!-- /#posts-list -->
-                </section><!-- /#content -->
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>links</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                            <li><a href="#">You can modify those links in your config file</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
 
-                            <li><a href="http://twitter.com/waterproofheart">Twitter</a></li>
-                            <li><a href="mailto:monica@aboutmonica.com">Email</a></li>
-                            <li><a href="https://github.com/M0nica">GitHub</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
+        </div><!-- /.eleven.columns -->
+        
+<div class="three columns">
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
+<h4>Pages</h4>
 
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
+ <ul>
+  </ul>
 
+<h4>Categories</h4>
+<ul class="blank">
+		<li><a href="/category/posts.html">posts</a></li>
+</ul>
+
+
+<h4>Tags</h4>
+	<ul class="blank">
+</ul>
+
+
+<nav class="widget">
+  <h4>Social</h4>
+  <ul class="blank">
+    <li><a href="http://twitter.com/waterproofheart">Twitter</a></li>
+    <li><a href="mailto:monica@aboutmonica.com">Email</a></li>
+    <li><a href="https://github.com/M0nica">GitHub</a></li>
+  </ul>
+</nav>
+
+</div> </div><!-- /.row -->
+
+<p class="paginator">
+    Page 1 / 1
+</p>
+</section><!-- /#content -->
+
+       </div><!-- /.row -->
+    </div><!-- /.container -->
+
+
+       <div class="container.nopad bg">
+
+
+        <footer id="credits" class="row">
+          <div class="seven columns left-center">
+
+                   <address id="about" class="vcard body">
+                    &#9400; Datalogues 2017, Maintained by <a href="http://www.aboutmonica.com">Monica Powell</a>
+                    </address>
+          </div>
+
+
+          <div class="seven columns">
+            <div class="row">
+              <ul class="socbtns">
+
+
+
+
+
+              </ul>
+            </div>
+          </div>
+        </footer>
+
+    </div>
+
+
+  <script src="/theme/js/libs/jquery-1.9.1.min.js"></script>
+  <script src="/theme/js/libs/gumby.min.js"></script>
+  <script src="/theme/js/plugins.js"></script>
 </body>
 </html>
