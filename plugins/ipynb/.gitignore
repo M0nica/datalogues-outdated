@@ -33,3 +33,5 @@ nosetests.xml
 output/
 cache/
 .ipynb_checkpoints
+
+plugins/ipynb/tests/pelican/content/
