@@ -22,3 +22,6 @@ DELETE_OUTPUT_DIRECTORY = True
 
 #DISQUS_SITENAME = ""
 #GOOGLE_ANALYTICS = ""
+
+# import pelican-theme
+THEME = "../pelican-themes/gum"
