@@ -72,7 +72,10 @@ html * {
 }
 
 body {
-  background: white;
+  /*background: white;*/
+
+  background-color: #f2f2f2;
+
   font-family: "Open Sans";
   font-weight: 400;
   color: #555555;
@@ -209,9 +212,9 @@ h6 {
 }
 
 /*=====================================================
- 
+
   Links & Paragraph styles
-  
+
   ======================================================*/
 p {
   font-family: "Open Sans";
@@ -247,7 +250,7 @@ a:hover {
 /*=====================================================
 
   Lists
-  
+
  ======================================================*/
 ul, ol {
   margin-bottom: 0.273em;
@@ -5429,7 +5432,8 @@ form fieldset legend {
   background: #212121;
 }
 .badge.danger, .label.danger {
-  background: #ca3838;
+  /*background: #ca3838;*/
+  background: #718dc8;
 }
 .badge.light, .label.light {
   background: #fff;
