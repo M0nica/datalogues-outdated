@@ -59,6 +59,7 @@ THEME = "../pelican-themes/Medius"
 
 
 # THEME = 'themes/bootstrap2'
+STATIC_PATHS = ['images', 'pdfs']
 
 OUTPUT_PATH = 'output'
 PATH = 'content'

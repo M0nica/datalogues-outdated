@@ -14,7 +14,7 @@ Thumbnail: ../images/github-laptop.jpg
 I recently started working on a [Weather app](https://github.com/M0nica/flask_weather) in Flask to auto-detect a user’s location based off of their IP address. After committing some updates to GitHub my app switched from being labeled as predominately Python to  98.9% CSS even though it was a Flask application in which most of the code I had written was in Python and HTML. Now and again, I do not agree with how GitHub classifies the languages in my repositories so I set out to figure out how to fix this issue.
 
 
-![github_before_linguist_update.png](../images/github_before_linguist_update.png)
+![github_before_linguist_update.png]({filename}/images/github_before_linguist_update.png)
 
 
 Before: My Flask App Appeared in GitHub as 98.9% CSS.
@@ -34,7 +34,7 @@ My .gitattribute:
 
 This one-line file told GitHub to ignore all of my files in my static/ folder which is where CSS and other assets are stored for a Flask app. Vendor files can sometimes take up a lot of relative space so I am telling the linguist to just ignore them (since they were accounting for 98.9% of my project)!
 
-![github_after_linguist_update.png](../images/github_after_linguist_update.png)
+![github_after_linguist_update.png]({filename}/images/github_after_linguist_update.png)
 
 
 After: My Flask App Appears in GitHub now as 56.2% Python and 43.8% HTML.
