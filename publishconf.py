@@ -24,4 +24,5 @@ DELETE_OUTPUT_DIRECTORY = True
 #GOOGLE_ANALYTICS = ""
 
 # import pelican-theme
-THEME = "../pelican-themes/gum"
+THEME = "../pelican-themes/Medius"
+# THEME = "../pelican-themes/gum"
