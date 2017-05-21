@@ -51,7 +51,11 @@ PLUGINS = ['ipynb.markup', 'representative_image']
 IGNORE_FILES = ['.ipynb_checkpoints']
 
 # import pelican-theme
-THEME = "../pelican-themes/gum"
+# THEME = "../pelican-themes/gum"
+# THEME = "../pelican-themes/html5-dopetrope"
+# THEME = "../pelican-themes/Flex"
+THEME = "../pelican-themes/Medius"
+
 
 
 # THEME = 'themes/bootstrap2'
