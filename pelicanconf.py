@@ -53,9 +53,12 @@ IGNORE_FILES = ['.ipynb_checkpoints']
 # import pelican-theme
 # THEME = "../pelican-themes/gum"
 # THEME = "../pelican-themes/html5-dopetrope"
-# THEME = "../pelican-themes/Flex"
-THEME = "../pelican-themes/Medius"
-
+#THEME = "../pelican-themes/Flex"
+THEME = "../pelican-themes/attila"
+# THEME = "../pelican-themes/nest"
+# THEME = "../pelican-themes/Medius"
+#THEME = "../pelican-themes/bulrush"
+# THEME = "../pelican-themes/pelican-striped-html5up"
 
 
 # THEME = 'themes/bootstrap2'
@@ -63,3 +66,16 @@ STATIC_PATHS = ['images', 'pdfs']
 
 OUTPUT_PATH = 'output'
 PATH = 'content'
+
+
+MEDIUS_AUTHORS = {
+    'Monica Powell': {
+        'description': """
+            I am a web developer that enjoys tinkering with data and is passionate about making the Internet more enjoyable.
+        """,
+        'cover': 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Milky_Way_Arch.jpg/1920px-Milky_Way_Arch.jpg',
+        'image': 'https://lh6.googleusercontent.com/-zEMaXmWAhdI/AAAAAAAAAAI/AAAAAAAAAAA/eVdgsm3TIDU/s128-c-k/photo.jpg',
+        'links': (('github', 'https://github.com/m0nica'),
+                  ('twitter-square', 'https://twitter.com/waterproofheart')),
+    }
+}

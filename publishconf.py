@@ -24,5 +24,9 @@ DELETE_OUTPUT_DIRECTORY = True
 #GOOGLE_ANALYTICS = ""
 
 # import pelican-theme
-THEME = "../pelican-themes/Medius"
+# THEME = "../pelican-themes/Medius"
+# THEME = "../pelican-themes/Flex"
+THEME = "../pelican-themes/attila"
+STATIC_PATHS = ['images', 'pdfs']
+
 # THEME = "../pelican-themes/gum"
