@@ -10,7 +10,8 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-SITEURL = '//m0nica.github.io/datalogues/'
+#SITEURL = '//m0nica.github.io/datalogues/'
+SITEURL = 'http://datalogues.com'
 RELATIVE_URLS = False
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
@@ -27,6 +28,5 @@ DELETE_OUTPUT_DIRECTORY = True
 # THEME = "../pelican-themes/Medius"
 # THEME = "../pelican-themes/Flex"
 THEME = "../pelican-themes/attila"
-STATIC_PATHS = ['images', 'pdfs']
 
 # THEME = "../pelican-themes/gum"

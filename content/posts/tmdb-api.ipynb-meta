@@ -1,8 +1,8 @@
-Title: Importing Data into Pandas
-Slug: import-data-pandas
-Date: 2017-05-20 10:30
+Title: Using the TMDB API to Find Films with the Highest Revenue
+Slug: tmdb-api
+Date: 2017-05-27 10:30
 Category: snippets
-Tags: python, pandas, csv
+Tags: python, pandas, api
 Author: Monica Powell
 Summary: A quick guide to importing data into Pandas.
-header_cover: images/Panda_Climbing_Tree_San_Diego_Zoo.jpeg
+header_cover: images/GetOut.png

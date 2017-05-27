@@ -940,7 +940,8 @@ img {
 }
 
 .inner {
-    max-width: 32em;
+    /*max-width: 32em;*/
+    max-width: 40em;
     margin: 0 auto;
     padding: 0 2em
 }
