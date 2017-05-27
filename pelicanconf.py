@@ -62,10 +62,13 @@ THEME = "../pelican-themes/attila"
 
 
 # THEME = 'themes/bootstrap2'
-STATIC_PATHS = ['images', 'pdfs']
+STATIC_PATHS = ['images', 'pdfs',  'extra/CNAME']
+EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
 
 OUTPUT_PATH = 'output'
 PATH = 'content'
+
+
 
 
 AUTHORS_BIO = {
