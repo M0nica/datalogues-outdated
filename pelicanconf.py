@@ -44,7 +44,7 @@ DEFAULT_PAGINATION = 10
 # render ipynb as markdown
 MARKUP = ('md', 'ipynb')
 
-PLUGIN_PATH = './plugins'
+PLUGIN_PATHS = ['./plugins']
 PLUGINS = ['ipynb.markup', 'neighbors']
 # old plugin ==> ,'minchin.pelican.plugins.cname'
 

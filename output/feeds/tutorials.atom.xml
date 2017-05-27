@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Datalogues - tutorials</title><link href="http://datalogues.com/" rel="alternate"></link><link href="http://datalogues.com/feeds/tutorials.atom.xml" rel="self"></link><id>http://datalogues.com/</id><updated>2017-05-20T10:20:00-04:00</updated><entry><title>How to Change Repo Language in GitHub</title><link href="http://datalogues.com/change-github-repo-language.html" rel="alternate"></link><published>2017-05-20T10:20:00-04:00</published><updated>2017-05-20T10:20:00-04:00</updated><author><name>Monica Powell</name></author><id>tag:datalogues.com,2017-05-20:/change-github-repo-language.html</id><summary type="html">&lt;p&gt;GitHub has a linguist library that auto-detects the language within every repository. Upon researching how to resolve GitHub misclassifying the language of your projects I found out the solution is as simple as telling GitHub which files to ignore.&lt;/p&gt;</summary><content type="html">&lt;!--Cover: ../images/github-laptop.jpg
+Thumnail: ../images/github-laptop.jpg--&gt;
+
+&lt;!-- Cover: ../images/github-laptop.jpg
+ Thumbnail: ../images/github-laptop.jpg --&gt;
+
+&lt;p&gt;I recently started working on a &lt;a href="https://github.com/M0nica/flask_weather"&gt;Weather app&lt;/a&gt; in Flask to auto-detect a user’s location based off of their IP address. After committing some updates to GitHub my app switched from being labeled as predominately Python to  98.9% CSS even though it was a Flask application in which most of the code I had written was in Python and HTML. Now and again, I do not agree with how GitHub classifies the languages in my repositories so I set out to figure out how to fix this issue.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="github_before_linguist_update.png" src="http://datalogues.com/images/github_before_linguist_update.png"&gt;&lt;/p&gt;
+&lt;p&gt;Before: My Flask App Appeared in GitHub as 98.9% CSS.&lt;/p&gt;
+&lt;h3&gt;Pro-tip: Help GitHub properly detect your repositories main language(s).&lt;/h3&gt;
+&lt;p&gt;GitHub has a &lt;a href="https://github.com/github/linguist"&gt;linguist library&lt;/a&gt; that auto-detects the language within every repository. Upon researching how to resolve GitHub misclassifying the language of your projects I found out the solution is as simple as telling GitHub which files to ignore. While you still want to commit these files to GitHub and therefore can’t use a   .gitignore you can tell GitHub’s linguist which files to ignore in a   .gitattribute file. (Side note: Check out my piece on “Hiding API Keys from GitHub” if you are interested in learning about   .gitignore).&lt;/p&gt;
+&lt;p&gt;the solution is as simple as telling GitHub which files to ignore!&lt;/p&gt;
+&lt;p&gt;Upon examining the documentation for the linguist library I learned that adding just one line to a  .gitattribute  file would resolve my language issues for this particular repo.&lt;/p&gt;
+&lt;p&gt;My .gitattribute:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;static/* linguist-vendored&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;This one-line file told GitHub to ignore all of my files in my static/ folder which is where CSS and other assets are stored for a Flask app. Vendor files can sometimes take up a lot of relative space so I am telling the linguist to just ignore them (since they were accounting for 98.9% of my project)!&lt;/p&gt;
+&lt;p&gt;&lt;img alt="github_after_linguist_update.png" src="http://datalogues.com/images/github_after_linguist_update.png"&gt;&lt;/p&gt;
+&lt;p&gt;After: My Flask App Appears in GitHub now as 56.2% Python and 43.8% HTML.
+Here’s a  repository with sample .gitattribute files for you try the next time you disagree with the linguist ;). Note: If the linguist truly is wrong GitHub encourages you to report it as an issue.&lt;/p&gt;
+&lt;p&gt;I hope this article was helpful! I would love to hear some of your tricks for GitHub and am happy to answer any questions you may have.&lt;/p&gt;
+&lt;p&gt;Also published on &lt;a href="https://medium.com/black-tech-diva/how-to-change-repo-language-in-github-c3e07819c5bb"&gt;Medium&lt;/a&gt;.&lt;/p&gt;</content><category term="GitHub"></category></entry></feed>
