@@ -1,89 +1,127 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
-
-    <link rel="stylesheet" type="text/css" href="//m0nica.github.io/datalogues/theme/stylesheet/style.min.css">
-
-  <link rel="stylesheet" type="text/css" href="//m0nica.github.io/datalogues/theme/pygments/github.min.css">
-  <link rel="stylesheet" type="text/css" href="//m0nica.github.io/datalogues/theme/font-awesome/css/font-awesome.min.css">
+      <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 
-    <link href="//m0nica.github.io/datalogues/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Datalogues Atom">
+  <title>How to Change Repo Language in GitHub</title>
 
 
-
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="HandheldFriendly" content="True" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="" />
+  <meta name="referrer" content="origin" />
+  <meta name="generator" content="Pelican" />
+  <link href="//m0nica.github.io/datalogues" rel="canonical" />
+
+  <!-- Feed -->
+        <link href="//m0nica.github.io/datalogues/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Datalogues Full Atom Feed" />
+          <link href="//m0nica.github.io/datalogues/feeds/tutorials.atom.xml" type="application/atom+xml" rel="alternate" title="Datalogues Categories Atom Feed" />
+
+  <link href="//m0nica.github.io/datalogues/theme/css/style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Code highlight color scheme -->
+      <link href="//m0nica.github.io/datalogues/theme/css/code_blocks/github.css" rel="stylesheet">
 
 
-<meta name="author" content="Monica Powell" />
-<meta name="description" content="GitHub has a linguist library that auto-detects the language within every repository. Upon researching how to resolve GitHub misclassifying the language of your projects I found out the solution is as simple as telling GitHub which files to ignore." />
-<meta name="keywords" content="GitHub">
-<meta property="og:site_name" content="Datalogues"/>
-<meta property="og:title" content="How to Change Repo Language in GitHub"/>
-<meta property="og:description" content="GitHub has a linguist library that auto-detects the language within every repository. Upon researching how to resolve GitHub misclassifying the language of your projects I found out the solution is as simple as telling GitHub which files to ignore."/>
-<meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="//m0nica.github.io/datalogues/change-github-repo-language.html"/>
-<meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2017-05-20 10:20:00-04:00"/>
-<meta property="article:modified_time" content="2010-12-05 19:30:00-05:00"/>
-<meta property="article:author" content="//m0nica.github.io/datalogues/author/monica-powell.html">
-<meta property="article:section" content="tutorials"/>
-<meta property="article:tag" content="GitHub"/>
-<meta property="og:image" content="//m0nica.github.io/datalogues/../images/github-laptop.jpg">
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
 
-  <title>Datalogues &ndash; How to Change Repo Language in GitHub</title>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
 
+
+    <link href="//m0nica.github.io/datalogues/change-github-repo-language.html" rel="canonical" />
+
+        <meta name="description" content="GitHub has a linguist library that auto-detects the language within every repository. Upon researching how to resolve GitHub...">
+
+        <meta name="author" content="Monica Powell">
+
+        <meta name="tags" content="GitHub">
+
+        <meta property="og:locale" content="" />
+    <meta property="og:site_name" content="Datalogues" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Datalogues" />
+    <meta property="og:description" content="View the blog." />
+    <meta property="og:url" content="//m0nica.github.io/datalogues" />
+      <meta name="og:image" content="//m0nica.github.io/datalogues/theme/images/post-bg.jpg">
+
+  <meta property="og:type" content="article">
+            <meta property="article:author" content="//m0nica.github.io/datalogues/author/monica-powell.html">
+  <meta property="og:url" content="//m0nica.github.io/datalogues/change-github-repo-language.html">
+  <meta property="og:title" content="How to Change Repo Language in GitHub">
+  <meta property="article:published_time" content="2017-05-20 10:20:00-04:00">
+            <meta property="og:description" content="GitHub has a linguist library that auto-detects the language within every repository. Upon researching how to resolve GitHub...">
+
+            <meta property="og:image" content="//m0nica.github.io/datalogues/theme/images/post-bg.jpg">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@waterproofheart">
+        <meta name="twitter:title" content="How to Change Repo Language in GitHub">
+        <meta name="twitter:url" content="//m0nica.github.io/datalogues/change-github-repo-language.html">
+
+            <meta name="twitter:image:src" content="//m0nica.github.io/datalogues/theme/images/post-bg.jpg">
+
+            <meta name="twitter:description" content="GitHub has a linguist library that auto-detects the language within every repository. Upon researching how to resolve GitHub...">
 </head>
-<body>
-  <aside>
-    <div>
-      <a href="//m0nica.github.io/datalogues">
-        <img src="//m0nica.github.io/datalogues/theme/img/profile.png" alt="" title="">
-      </a>
-      <h1><a href="//m0nica.github.io/datalogues"></a></h1>
+<!-- TODO : Body class -->
+<body class="home-template">
+
+<nav id="menu">
+  <a class="close-button">Close</a>
+  <div class="nav-wrapper">
+    <p class="nav-label">Menu</p>
+    <ul>
 
 
-      <nav>
-        <ul class="list">
-
-          <li><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
-          <li><a href="http://python.org/" target="_blank">Python.org</a></li>
-          <li><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
-          <li><a href="#" target="_blank">You can modify those links in your config file</a></li>
-        </ul>
-      </nav>
-
-      <ul class="social">
-        <li><a class="sc-Twitter" href="http://twitter.com/waterproofheart" target="_blank"><i class="fa fa-Twitter"></i></a></li>
-        <li><a class="sc-Email" href="mailto:monica@aboutmonica.com" target="_blank"><i class="fa fa-Email"></i></a></li>
-        <li><a class="sc-GitHub" href="https://github.com/M0nica" target="_blank"><i class="fa fa-GitHub"></i></a></li>
-      </ul>
+    </ul>
+  </div>
+</nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
     </div>
 
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="post-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="//m0nica.github.io/datalogues/" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">How to Change Repo Language in GitHub</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="//m0nica.github.io/datalogues/author/monica-powell.html">Monica powell</a>
+            | <time datetime="Sat 20 May 2017">Sat 20 May 2017</time>
+        </span>
+        <!-- TODO : Modified check -->
+            <span class="post-meta"> | Updated on Sun 05 December 2010</span>
+            <div class="post-cover cover" style="background-image: url('//m0nica.github.io/datalogues/theme/images/post-bg.jpg')">
+      </div>
+    </header>
 
-  </aside>
-  <main>
+  <section id="wrapper">
+    <a class="hidden-close"></a>
 
-
-<article class="single">
-  <header>
-    <h1 id="change-github-repo-language">How to Change Repo Language in GitHub</h1>
-    <p>
-          Posted on Sat 20 May 2017 in <a href="//m0nica.github.io/datalogues/category/tutorials.html">tutorials</a>
-
-
-    </p>
-  </header>
-
-
-  <div>
-    <!-- Cover: ../images/github-laptop.jpg
+    <!-- Post content -->
+    <main class="content" role="main">
+        <article class="post">
+        <div class="inner">
+            <section class="post-content">
+                <!-- Cover: ../images/github-laptop.jpg
  Thumbnail: ../images/github-laptop.jpg -->
 
 <p>I recently started working on a <a href="https://github.com/M0nica/flask_weather">Weather app</a> in Flask to auto-detect a user’s location based off of their IP address. After committing some updates to GitHub my app switched from being labeled as predominately Python to  98.9% CSS even though it was a Flask application in which most of the code I had written was in Python and HTML. Now and again, I do not agree with how GitHub classifies the languages in my repositories so I set out to figure out how to fix this issue.</p>
@@ -101,37 +139,53 @@
 Here’s a  repository with sample .gitattribute files for you try the next time you disagree with the linguist ;). Note: If the linguist truly is wrong GitHub encourages you to report it as an issue.</p>
 <p>I hope this article was helpful! I would love to hear some of your tricks for GitHub and am happy to answer any questions you may have.</p>
 <p>Also published on <a href="https://medium.com/black-tech-diva/how-to-change-repo-language-in-github-c3e07819c5bb">Medium</a>.</p>
-  </div>
-  <div class="tag-cloud">
-    <p>
-      <a href="//m0nica.github.io/datalogues/tag/github.html">GitHub</a>
-    </p>
-  </div>
+            </section>
+
+            <section class="post-info">
+                <div class="post-share">
+                    <a class="twitter" href="https://twitter.com/share?text=How to Change Repo Language in GitHub&amp;url=//m0nica.github.io/datalogues/change-github-repo-language.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=//m0nica.github.io/datalogues/change-github-repo-language.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=//m0nica.github.io/datalogues/change-github-repo-language.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+
+                <aside class="post-tags">
+<a href="//m0nica.github.io/datalogues/tag/github.html">GitHub</a>                </aside>
+
+                <div class="clear"></div>
 
 
+                </section>
 
 
-</article>
+                <aside class="post-nav">
+                    <div class="clear"></div>
+                </aside>
 
-    <footer>
-<p>&copy; Monica Powell </p>
-<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
-</p>    </footer>
-  </main>
+            </div>
+        </article>
+    </main>
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
 
+    <footer id="footer">
+      <div class="inner">
+        <section class="credits">
+          <!--<span class="credits-theme">Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a></span>-->
+          <!--<span class="credits-software">Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a></span>-->
+          <span class="credits-software">&copy; Datalogues | Published by <a href="http://www.aboutmonica.com">Monica Powell</a></span>
+        </section>
+      </div>
+    </footer>
+  </section>
 
+  <script type="text/javascript" src="//m0nica.github.io/datalogues/theme/js/script.js"></script>
 
-
-
-<script type="application/ld+json">
-{
-  "@context" : "http://schema.org",
-  "@type" : "Blog",
-  "name": " Datalogues ",
-  "url" : "//m0nica.github.io/datalogues",
-  "image": "",
-  "description": ""
-}
-</script>
 </body>
 </html>
