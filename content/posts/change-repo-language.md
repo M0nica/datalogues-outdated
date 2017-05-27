@@ -5,7 +5,7 @@ Tags:  GitHub
 Slug: change-github-repo-language
 Authors: Monica Powell
 Summary: GitHub has a linguist library that auto-detects the language within every repository. Upon researching how to resolve GitHub misclassifying the language of your projects I found out the solution is as simple as telling GitHub which files to ignore.
-header_cover: ../images/github-laptop.jpg
+header_cover: images/github-laptop.jpg
 <!--Cover: ../images/github-laptop.jpg
 Thumnail: ../images/github-laptop.jpg-->
 
