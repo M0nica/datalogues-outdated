@@ -940,7 +940,8 @@ img {
 }
 
 .inner {
-    max-width: 32em;
+    /*max-width: 32em;*/
+    max-width: 40em;
     margin: 0 auto;
     padding: 0 2em
 }
@@ -1431,7 +1432,7 @@ img {
 .post-content img,
 .post-content .fluid-width-video-wrapper {
     max-width: none;
-    width: 110%;
+    /*width: 110%;*/
     margin-left: -5%
 }
 
