@@ -45,7 +45,7 @@ DEFAULT_PAGINATION = 10
 MARKUP = ('md', 'ipynb')
 
 PLUGIN_PATH = './plugins'
-PLUGINS = ['ipynb.markup']
+PLUGINS = ['ipynb.markup', 'neighbors']
 # old plugin ==> ,'minchin.pelican.plugins.cname'
 
 # pelican will ignore ipynb checkpoints
