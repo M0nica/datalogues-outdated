@@ -68,14 +68,13 @@ OUTPUT_PATH = 'output'
 PATH = 'content'
 
 
-MEDIUS_AUTHORS = {
-    'Monica Powell': {
-        'description': """
-            I am a web developer that enjoys tinkering with data and is passionate about making the Internet more enjoyable.
-        """,
-        'cover': 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Milky_Way_Arch.jpg/1920px-Milky_Way_Arch.jpg',
-        'image': 'https://lh6.googleusercontent.com/-zEMaXmWAhdI/AAAAAAAAAAI/AAAAAAAAAAA/eVdgsm3TIDU/s128-c-k/photo.jpg',
-        'links': (('github', 'https://github.com/m0nica'),
-                  ('twitter-square', 'https://twitter.com/waterproofheart')),
-    }
+AUTHORS_BIO = {
+"monica powell": {
+  "name": "Monica Powell",
+  "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Milky_Way_Arch.jpg/1920px-Milky_Way_Arch.jpg",
+  "image": "http://www.aboutmonica.com/images/monicaheadshot-bw-circlet.png",
+  "website": "http://www.aboutmonica.com",
+  "location": "New York City",
+  "bio": "I am a web developer who enjoys tinkering with data and is passionate about making the Internet more enjoyable."
+  }
 }

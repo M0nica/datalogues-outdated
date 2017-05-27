@@ -1230,6 +1230,15 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Image Courtesy of jballeis (Own work) &lt;a href="http://creativecommons.org/licenses/by-sa/3.0"&gt;CC BY-SA 3.0&lt;/a&gt;, via Wikimedia Commons&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var mathjaxscript = document.createElement('script');
@@ -1259,7 +1268,10 @@ h6:hover .anchor-link {
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="python"></category><category term="pandas"></category><category term="csv"></category></entry><entry><title>How to Change Repo Language in GitHub</title><link href="//m0nica.github.io/datalogues/change-github-repo-language.html" rel="alternate"></link><published>2017-05-20T10:20:00-04:00</published><updated>2010-12-05T19:30:00-05:00</updated><author><name>Monica Powell</name></author><id>tag:m0nica.github.io,2017-05-20:/datalogues/change-github-repo-language.html</id><summary type="html">&lt;p&gt;GitHub has a linguist library that auto-detects the language within every repository. Upon researching how to resolve GitHub misclassifying the language of your projects I found out the solution is as simple as telling GitHub which files to ignore.&lt;/p&gt;</summary><content type="html">&lt;!-- Cover: ../images/github-laptop.jpg
+</content><category term="python"></category><category term="pandas"></category><category term="csv"></category></entry><entry><title>How to Change Repo Language in GitHub</title><link href="//m0nica.github.io/datalogues/change-github-repo-language.html" rel="alternate"></link><published>2017-05-20T10:20:00-04:00</published><updated>2017-05-20T10:20:00-04:00</updated><author><name>Monica Powell</name></author><id>tag:m0nica.github.io,2017-05-20:/datalogues/change-github-repo-language.html</id><summary type="html">&lt;p&gt;GitHub has a linguist library that auto-detects the language within every repository. Upon researching how to resolve GitHub misclassifying the language of your projects I found out the solution is as simple as telling GitHub which files to ignore.&lt;/p&gt;</summary><content type="html">&lt;!--Cover: ../images/github-laptop.jpg
+Thumnail: ../images/github-laptop.jpg--&gt;
+
+&lt;!-- Cover: ../images/github-laptop.jpg
  Thumbnail: ../images/github-laptop.jpg --&gt;
 
 &lt;p&gt;I recently started working on a &lt;a href="https://github.com/M0nica/flask_weather"&gt;Weather app&lt;/a&gt; in Flask to auto-detect a user’s location based off of their IP address. After committing some updates to GitHub my app switched from being labeled as predominately Python to  98.9% CSS even though it was a Flask application in which most of the code I had written was in Python and HTML. Now and again, I do not agree with how GitHub classifies the languages in my repositories so I set out to figure out how to fix this issue.&lt;/p&gt;
