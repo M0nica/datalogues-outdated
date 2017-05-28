@@ -5,7 +5,7 @@
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;&lt;em&gt;Get Out&lt;/em&gt; has been one of the most talked about films in 2017 and as of April 2017 &lt;a href="http://www.thefader.com/2017/04/04/get-out-original-screenplay-record"&gt;was the highest grossing debut film based on an original screenplay in history&lt;/a&gt;. We want to programmatically find out how &lt;em&gt;Get Out&lt;/em&gt; ranked amongst other 2017 American films and which films have earned the most revenue in 2017. This tutorial assumes most readers have basic working knowledge of Python.&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
+&lt;p&gt;&lt;em&gt;Get Out&lt;/em&gt; has been one of the most talked about films in 2017 and as of April 2017 &lt;a href="http://www.thefader.com/2017/04/04/get-out-original-screenplay-record" target="_blank"&gt;the highest grossing debut film based on an original screenplay in history&lt;/a&gt;. We want to programmatically find out how &lt;em&gt;Get Out&lt;/em&gt; ranked amongst other 2017 American films and which films have earned the most revenue in 2017. This tutorial assumes most readers have basic working knowledge of Python.&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -982,9 +982,9 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;&lt;em&gt;Get Out&lt;/em&gt; has been one of the most talked about films in 2017 and as of April 2017 &lt;a href="http://www.thefader.com/2017/04/04/get-out-original-screenplay-record"&gt;was the highest grossing debut film based on an original screenplay in history&lt;/a&gt;. We want to programmatically find out how &lt;em&gt;Get Out&lt;/em&gt; ranked amongst other 2017 American films and which films have earned the most revenue in 2017. This tutorial assumes most readers have basic working knowledge of Python.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Get Out&lt;/em&gt; has been one of the most talked about films in 2017 and as of April 2017 &lt;a href="http://www.thefader.com/2017/04/04/get-out-original-screenplay-record" target="_blank"&gt;the highest grossing debut film based on an original screenplay in history&lt;/a&gt;. We want to programmatically find out how &lt;em&gt;Get Out&lt;/em&gt; ranked amongst other 2017 American films and which films have earned the most revenue in 2017. This tutorial assumes most readers have basic working knowledge of Python.&lt;/p&gt;
 &lt;h3 id="Prequisites"&gt;Prequisites&lt;a class="anchor-link" href="#Prequisites"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Install the following python packages and run them ideally in a &lt;a href="http://python-guide-pt-br.readthedocs.io/en/latest/dev/virtualenvs/"&gt;virtualenv&lt;/a&gt;.&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Install the following python packages and run them ideally in a &lt;a href="http://python-guide-pt-br.readthedocs.io/en/latest/dev/virtualenvs/" target="_blank"&gt;virtualenv&lt;/a&gt;.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;config&lt;/li&gt;
 &lt;li&gt;requests&lt;/li&gt;
@@ -996,9 +996,9 @@ h6:hover .anchor-link {
 &lt;li&gt;&lt;p&gt;In addition to installing the above dependencies we will need to request an API key from &lt;a href="https://www.themoviedb.org/"&gt;The Movie DB (TMDB)&lt;/a&gt;. TMDB has a free API to programmatically access information about movies.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;In order to request an API key from TMDB:&lt;ol&gt;
-&lt;li&gt;&lt;a href="https://www.themoviedb.org/account/signup"&gt;Create a free account&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.themoviedb.org/account/signup" target="_blank"&gt;Create a free account&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Check your e-mail to verify your account.&lt;/li&gt;
-&lt;li&gt;Visit the &lt;a href="https://www.themoviedb.org/settings/api"&gt;API Settings page&lt;/a&gt; in your Account Settings and request an API key &lt;/li&gt;
+&lt;li&gt;Visit the &lt;a href="https://www.themoviedb.org/settings/api" target="_blank"&gt;API Settings page&lt;/a&gt; in your Account Settings and request an API key &lt;/li&gt;
 &lt;li&gt;You should now have an API key and be ready to go!&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
