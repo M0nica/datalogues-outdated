@@ -4,112 +4,105 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>/</loc>
-<lastmod>2017-05-27T23:26:22-00:00</lastmod>
+<loc>http://datalogues.com/</loc>
+<lastmod>2017-05-27T23:29:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/archives.html</loc>
-<lastmod>2017-05-27T23:26:22-00:00</lastmod>
+<loc>http://datalogues.com/archives.html</loc>
+<lastmod>2017-05-27T23:29:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tags.html</loc>
-<lastmod>2017-05-27T23:26:22-00:00</lastmod>
+<loc>http://datalogues.com/tags.html</loc>
+<lastmod>2017-05-27T23:29:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/categories.html</loc>
-<lastmod>2017-05-27T23:26:22-00:00</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>/tmdb-api.html</loc>
+<loc>http://datalogues.com/tmdb-api.html</loc>
 <lastmod>2017-05-27T10:30:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/hide-api-keys.html</loc>
+<loc>http://datalogues.com/hide-api-keys.html</loc>
 <lastmod>2017-05-27T10:20:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/import-data-pandas.html</loc>
+<loc>http://datalogues.com/import-data-pandas.html</loc>
 <lastmod>2017-05-20T10:30:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/change-github-repo-language.html</loc>
+<loc>http://datalogues.com/change-github-repo-language.html</loc>
 <lastmod>2017-05-20T10:20:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/category/snippets</loc>
+<loc>http://datalogues.com/category/snippets</loc>
 <lastmod>2017-05-27T10:30:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/category/tutorials</loc>
+<loc>http://datalogues.com/category/tutorials</loc>
 <lastmod>2017-05-27T10:20:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/python</loc>
+<loc>http://datalogues.com/tag/python</loc>
 <lastmod>2017-05-27T10:30:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/pandas</loc>
+<loc>http://datalogues.com/tag/pandas</loc>
 <lastmod>2017-05-27T10:30:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/api</loc>
+<loc>http://datalogues.com/tag/api</loc>
 <lastmod>2017-05-27T10:30:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/github</loc>
+<loc>http://datalogues.com/tag/github</loc>
 <lastmod>2017-05-27T10:20:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tag/csv</loc>
+<loc>http://datalogues.com/tag/csv</loc>
 <lastmod>2017-05-20T10:30:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/author/monica-powell</loc>
+<loc>http://datalogues.com/author/monica-powell</loc>
 <lastmod>2017-05-27T10:30:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
