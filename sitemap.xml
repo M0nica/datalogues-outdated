@@ -5,21 +5,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://datalogues.com/</loc>
-<lastmod>2017-05-27T23:44:22-00:00</lastmod>
+<lastmod>2017-05-28T08:17:55-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://datalogues.com/archives.html</loc>
-<lastmod>2017-05-27T23:44:22-00:00</lastmod>
+<lastmod>2017-05-28T08:17:55-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://datalogues.com/tags.html</loc>
-<lastmod>2017-05-27T23:44:22-00:00</lastmod>
+<lastmod>2017-05-28T08:17:55-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

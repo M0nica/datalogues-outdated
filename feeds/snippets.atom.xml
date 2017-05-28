@@ -5,7 +5,7 @@
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;&lt;em&gt;Get Out&lt;/em&gt; has been one of the most talked about films in 2017 and as of April 2017 &lt;a href="http://www.thefader.com/2017/04/04/get-out-original-screenplay-record"&gt;was the highest grossing debut film based on an original screenplay in history&lt;/a&gt;. I wanted to find out how &lt;em&gt;Get Out&lt;/em&gt; ranked amongst other 2017 American films and to find out which film has earned the most revenue in 2017.&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
+&lt;p&gt;&lt;em&gt;Get Out&lt;/em&gt; has been one of the most talked about films in 2017 and as of April 2017 &lt;a href="http://www.thefader.com/2017/04/04/get-out-original-screenplay-record"&gt;was the highest grossing debut film based on an original screenplay in history&lt;/a&gt;. We want to programmatically find out how &lt;em&gt;Get Out&lt;/em&gt; ranked amongst other 2017 American films and which films have earned the most revenue in 2017. This tutorial assumes most readers have basic working knowledge of Python.&lt;/p&gt;</summary><content type="html">&lt;style type="text/css"&gt;/*!
 *
 * IPython notebook
 *
@@ -982,25 +982,39 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;&lt;em&gt;Get Out&lt;/em&gt; has been one of the most talked about films in 2017 and as of April 2017 &lt;a href="http://www.thefader.com/2017/04/04/get-out-original-screenplay-record"&gt;was the highest grossing debut film based on an original screenplay in history&lt;/a&gt;. I wanted to find out how &lt;em&gt;Get Out&lt;/em&gt; ranked amongst other 2017 American films and to find out which film has earned the most revenue in 2017.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.themoviedb.org/"&gt;The Movie DB (TMDB)&lt;/a&gt; has a free API to programmatically access information about movies.&lt;/p&gt;
-&lt;p&gt;In order to get started with TMDB:&lt;/p&gt;
-&lt;ol&gt;
+&lt;p&gt;&lt;em&gt;Get Out&lt;/em&gt; has been one of the most talked about films in 2017 and as of April 2017 &lt;a href="http://www.thefader.com/2017/04/04/get-out-original-screenplay-record"&gt;was the highest grossing debut film based on an original screenplay in history&lt;/a&gt;. We want to programmatically find out how &lt;em&gt;Get Out&lt;/em&gt; ranked amongst other 2017 American films and which films have earned the most revenue in 2017. This tutorial assumes most readers have basic working knowledge of Python.&lt;/p&gt;
+&lt;h3 id="Prequisites"&gt;Prequisites&lt;a class="anchor-link" href="#Prequisites"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Install the following python packages and run them ideally in a &lt;a href="http://python-guide-pt-br.readthedocs.io/en/latest/dev/virtualenvs/"&gt;virtualenv&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;config&lt;/li&gt;
+&lt;li&gt;requests&lt;/li&gt;
+&lt;li&gt;locale&lt;/li&gt;
+&lt;li&gt;pandas&lt;/li&gt;
+&lt;li&gt;matplotlib&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;In addition to installing the above dependencies we will need to request an API key from &lt;a href="https://www.themoviedb.org/"&gt;The Movie DB (TMDB)&lt;/a&gt;. TMDB has a free API to programmatically access information about movies.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In order to request an API key from TMDB:&lt;ol&gt;
 &lt;li&gt;&lt;a href="https://www.themoviedb.org/account/signup"&gt;Create a free account&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Check your e-mail to verify your account.&lt;/li&gt;
-&lt;li&gt;Visit the &lt;a href="https://www.themoviedb.org/settings/api"&gt;API Settings page&lt;/a&gt; in your Account Settings and request an api key &lt;/li&gt;
+&lt;li&gt;Visit the &lt;a href="https://www.themoviedb.org/settings/api"&gt;API Settings page&lt;/a&gt; in your Account Settings and request an API key &lt;/li&gt;
 &lt;li&gt;You should now have an API key and be ready to go!&lt;/li&gt;
 &lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [603]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [660]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;config&lt;/span&gt; &lt;span class="c1"&gt;# to hide API keys&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;requests&lt;/span&gt; &lt;span class="c1"&gt;# to make API calls&lt;/span&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;config&lt;/span&gt; &lt;span class="c1"&gt;# to hide TMDB API keys&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;requests&lt;/span&gt; &lt;span class="c1"&gt;# to make TMDB API calls&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;locale&lt;/span&gt; &lt;span class="c1"&gt;# to format currency as USD &lt;/span&gt;
 &lt;span class="n"&gt;locale&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setlocale&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;locale&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;LC_ALL&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;''&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
 
@@ -1008,17 +1022,8 @@ h6:hover .anchor-link {
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;plt&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.ticker&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;FuncFormatter&lt;/span&gt; &lt;span class="c1"&gt;# to format currency on charts axis&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [538]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;api_key&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tmdb_api_key&lt;/span&gt; &lt;span class="c1"&gt;# get API key from config.py file&lt;/span&gt;
+
+&lt;span class="n"&gt;api_key&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tmdb_api_key&lt;/span&gt; &lt;span class="c1"&gt;# get TMDB API key from config.py file&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1029,7 +1034,7 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="What-are-the-highest-earning-American-films-of-2017?"&gt;What are the highest earning American films of 2017?&lt;a class="anchor-link" href="#What-are-the-highest-earning-American-films-of-2017?"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;If you plan on committing your project to GitHub or another public repository and need help setting up &lt;code&gt;config&lt;/code&gt; you should read &lt;a href="/hide-api-keys.html"&gt;this article&lt;/a&gt; about using &lt;code&gt;config&lt;/code&gt; to hide API keys.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1038,14 +1043,23 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;In order to get the highest earning films from TMDB an API request needs to be constructed to return films with a &lt;code&gt;primary_release_year&lt;/code&gt; of 2017 sorted in descending order by revenue.&lt;/p&gt;
-&lt;h3 id="API-Call"&gt;API Call&lt;a class="anchor-link" href="#API-Call"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;h2 id="Part-1:-Determine-the-highest-earning-American-films-of-2017"&gt;Part 1: Determine the highest earning American films of 2017&lt;a class="anchor-link" href="#Part-1:-Determine-the-highest-earning-American-films-of-2017"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;In this section we will request &lt;strong&gt;2017&lt;/strong&gt; data from TMDB, store the data we recieve as a &lt;code&gt;json&lt;/code&gt; into a &lt;code&gt;dataframe&lt;/code&gt; and then use &lt;code&gt;matplotlib&lt;/code&gt; to visualize our data.&lt;/p&gt;
+&lt;h3 id="Make-API-Call-to-TMDB-to-return-the-data-of-interest"&gt;Make API Call to TMDB to return the data of interest&lt;a class="anchor-link" href="#Make-API-Call-to-TMDB-to-return-the-data-of-interest"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;In order to get the highest earning films from TMDB an API request needs to be constructed to return films with a &lt;code&gt;primary_release_year&lt;/code&gt; of 2017 sorted in descending order by revenue.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [626]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [665]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;response&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;requests&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'https://api.themoviedb.org/3/discover/movie?api_key='&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;  &lt;span class="n"&gt;api_key&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s1"&gt;'&amp;primary;_release_year=2017&amp;sort;_by=revenue.desc'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1056,33 +1070,15 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [627]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [666]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;highest_revenue&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;response&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;json&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="c1"&gt;# store parsed json response&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [628]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# uncomment the next line to get a peek at the highest_revenue json structure&lt;/span&gt;
+
+&lt;span class="c1"&gt;# uncomment the next line to get a peek at the highest_revenue json structure&lt;/span&gt;
 &lt;span class="c1"&gt;# highest_revenue&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [629]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;highest_revenue_films&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;highest_revenue&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'results'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="n"&gt;highest_revenue_films&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;highest_revenue&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'results'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1093,17 +1089,19 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Storing-Data"&gt;Storing Data&lt;a class="anchor-link" href="#Storing-Data"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Create a dataframe to store the film and revenue information that is returned from the API call.&lt;/p&gt;
+&lt;h3 id="Create-dataframe-from-JSON-returned-from-TMDB-API-call"&gt;Create dataframe from JSON returned from TMDB API call&lt;a class="anchor-link" href="#Create-dataframe-from-JSON-returned-from-TMDB-API-call"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Let's store the JSON data returned from our API call in a dataframe to store each film and its associated revenue.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [631]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [676]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;columns&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'film'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'revenue'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# define column names for our new dataframe&lt;/span&gt;
+&lt;span class="n"&gt;columns&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'film'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'revenue'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 
+&lt;span class="c1"&gt;# create dataframe with film and revenue columns&lt;/span&gt;
 &lt;span class="n"&gt;df&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pandas&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DataFrame&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;columns&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;columns&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
@@ -1115,13 +1113,13 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Looping through the data and adding it to the dataframe&lt;/p&gt;
+&lt;p&gt;Now to add the data to our dataframe we will need to loop through the data.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [632]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [677]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# for each of the highest revenue films make an api call for that specific movie to return the budget and revenue&lt;/span&gt;
@@ -1130,8 +1128,7 @@ h6:hover .anchor-link {
     &lt;span class="n"&gt;film_revenue&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;requests&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'https://api.themoviedb.org/3/movie/'&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;film&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'id'&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s1"&gt;'?api_key='&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;api_key&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s1"&gt;'&amp;language;=en-US'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
     &lt;span class="n"&gt;film_revenue&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;film_revenue&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;json&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
     &lt;span class="c1"&gt;#print(locale.currency(film_revenue['revenue'], grouping=True ))&lt;/span&gt;
-    &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;loc&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;film&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'title'&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;film_revenue&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'revenue'&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt; &lt;span class="c1"&gt;# store title and revenue in our dataframe&lt;/span&gt;
-    
+    &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;loc&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;film&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'title'&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;film_revenue&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'revenue'&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt; &lt;span class="c1"&gt;# store title and revenue in our dataframe    &lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1148,7 +1145,7 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [634]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [678]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
@@ -1159,7 +1156,7 @@ h6:hover .anchor-link {
 &lt;div class="output_wrapper"&gt;
 &lt;div class="output"&gt;
 &lt;div class="output_area"&gt;
-&lt;div class="prompt output_prompt"&gt;Out[634]:&lt;/div&gt;
+&lt;div class="prompt output_prompt"&gt;Out[678]:&lt;/div&gt;
 &lt;div class="output_html rendered_html output_subarea output_execute_result"&gt;
 &lt;div&gt;
 &lt;style&gt;
@@ -1202,7 +1199,7 @@ h6:hover .anchor-link {
 &lt;tr&gt;
 &lt;th&gt;3&lt;/th&gt;
 &lt;td&gt;Logan&lt;/td&gt;
-&lt;td&gt;608578340&lt;/td&gt;
+&lt;td&gt;608674100&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;th&gt;4&lt;/th&gt;
@@ -1222,27 +1219,26 @@ h6:hover .anchor-link {
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Now it's time to get to plotting&lt;/p&gt;
+&lt;h3 id="Let's-actually-see-the-data-with-matplotlib"&gt;Let's actually &lt;em&gt;see&lt;/em&gt; the data with matplotlib&lt;a class="anchor-link" href="#Let's-actually-see-the-data-with-matplotlib"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;We will create a horizontal bar chart using matplotlib to display the revenue earned for each film.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [636]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [680]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;matplotlib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;style&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;use&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'ggplot'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [640]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ax&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subplots&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ax&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subplots&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;kind&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"barh"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'revenue'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;color&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'#624ea7'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'#599ad3'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'#f9a65a'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'#9e66ab'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'purple'&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'film'&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;ax&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;ax&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
 &lt;span class="c1"&gt;#format xaxis in terms of currency&lt;/span&gt;
@@ -1263,11 +1259,11 @@ h6:hover .anchor-link {
 &lt;div class="output_wrapper"&gt;
 &lt;div class="output"&gt;
 &lt;div class="output_area"&gt;
-&lt;div class="prompt output_prompt"&gt;Out[640]:&lt;/div&gt;
+&lt;div class="prompt output_prompt"&gt;Out[680]:&lt;/div&gt;
 &lt;div class="output_text output_subarea output_execute_result"&gt;
-&lt;pre&gt;[&lt;matplotlib.text.text at 0x110c1afd0&gt;,
- &lt;matplotlib.text.text at 0x110b6fb70&gt;,
- &lt;matplotlib.text.text at 0x110ccb198&gt;]&lt;/pre&gt;
+&lt;pre&gt;[&lt;matplotlib.text.text at 0x111422ac8&gt;,
+ &lt;matplotlib.text.text at 0x111467668&gt;,
+ &lt;matplotlib.text.text at 0x1115007b8&gt;]&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="output_area"&gt;
@@ -1916,13 +1912,31 @@ QoSIiIj4ohAhIiIivihEiIiIiC8KESIiIuKLQoSIiIj48gtCXer9JbniEQAAAABJRU5ErkJggg==
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="What-are-the-highest-earning-American-films-of-all-time?"&gt;What are the highest earning American films of all time?&lt;a class="anchor-link" href="#What-are-the-highest-earning-American-films-of-all-time?"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;h2 id="Part-2:-Determine-the-highest-earning-American-films-of-all-time"&gt;Part 2: Determine the highest earning American films of all-time&lt;a class="anchor-link" href="#Part-2:-Determine-the-highest-earning-American-films-of-all-time"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;In this section we will request &lt;strong&gt;all-time&lt;/strong&gt; data from TMDB, store the data we recieve as a &lt;code&gt;json&lt;/code&gt; into a &lt;code&gt;dataframe&lt;/code&gt; and then use &lt;code&gt;matplotlib&lt;/code&gt; to visualize our data. Our API call will be similar to the one we used in the previous section but sans &lt;code&gt;&amp;primary;_release_year=2017&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h3 id="Requesting,-formatting-and-storing-API-data"&gt;Requesting, formatting and storing API data&lt;a class="anchor-link" href="#Requesting,-formatting-and-storing-API-data"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [641]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [690]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;response&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;requests&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'https://api.themoviedb.org/3/discover/movie?api_key='&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;  &lt;span class="n"&gt;api_key&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s1"&gt;'&amp;sort;_by=revenue.desc'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1947,18 +1961,11 @@ QoSIiIj4ohAhIiIivihEiIiIiC8KESIiIuKLQoSIiIj48gtCXer9JbniEQAAAABJRU5ErkJggg==
     
     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;film_revenue&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'budget'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;&gt;&lt;/span&gt; &lt;span class="mi"&gt;281&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
         &lt;span class="c1"&gt;# print(film_revenue['budget'])&lt;/span&gt;
+        &lt;span class="c1"&gt;# add film title, revenue, budget and release date to the dataframe&lt;/span&gt;
         &lt;span class="n"&gt;highest_revenue_ever_df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;loc&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;highest_revenue_ever_df&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;film&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'title'&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;film_revenue&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'revenue'&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;film_revenue&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'budget'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;film_revenue&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'release_date'&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [593]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;highest_revenue_ever_df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="n"&gt;highest_revenue_ever_df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;    
+        
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1966,7 +1973,7 @@ QoSIiIj4ohAhIiIivihEiIiIiC8KESIiIuKLQoSIiIj48gtCXer9JbniEQAAAABJRU5ErkJggg==
 &lt;div class="output_wrapper"&gt;
 &lt;div class="output"&gt;
 &lt;div class="output_area"&gt;
-&lt;div class="prompt output_prompt"&gt;Out[593]:&lt;/div&gt;
+&lt;div class="prompt output_prompt"&gt;Out[690]:&lt;/div&gt;
 &lt;div class="output_html rendered_html output_subarea output_execute_result"&gt;
 &lt;div&gt;
 &lt;style&gt;
@@ -2041,13 +2048,13 @@ QoSIiIj4ohAhIiIivihEiIiIiC8KESIiIuKLQoSIiIj48gtCXer9JbniEQAAAABJRU5ErkJggg==
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Calculate the gross-profit by subtracting total revenue from amount spent. Earlier I made the budget values negative therefore I am adding the revenue to the (negative) budget to get the gross profit.&lt;/p&gt;
+&lt;h3 id="Calculate-the-gross-profit"&gt;Calculate the gross profit&lt;a class="anchor-link" href="#Calculate-the-gross-profit"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;We can calculate the gross profit by subtracting total revenue from amount spent. Earlier we made the budget values negative therefore we need to add the revenue to the (negative) budget to get the gross profit which is effectively subtraction.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [643]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [686]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;highest_revenue_ever_df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'gross'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;highest_revenue_ever_df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'revenue'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;highest_revenue_ever_df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'budget'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
@@ -2154,9 +2161,18 @@ QoSIiIj4ohAhIiIivihEiIiIiC8KESIiIuKLQoSIiIj48gtCXer9JbniEQAAAABJRU5ErkJggg==
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h3 id="Plotting-data-in-matplotlib-with-horizontal-bar-charts-and-a-scatter-plot"&gt;Plotting data in matplotlib with horizontal bar charts and a scatter plot&lt;a class="anchor-link" href="#Plotting-data-in-matplotlib-with-horizontal-bar-charts-and-a-scatter-plot"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [646]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [687]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ax&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subplots&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
@@ -2172,11 +2188,11 @@ QoSIiIj4ohAhIiIivihEiIiIiC8KESIiIuKLQoSIiIj48gtCXer9JbniEQAAAABJRU5ErkJggg==
 &lt;div class="output_wrapper"&gt;
 &lt;div class="output"&gt;
 &lt;div class="output_area"&gt;
-&lt;div class="prompt output_prompt"&gt;Out[646]:&lt;/div&gt;
+&lt;div class="prompt output_prompt"&gt;Out[687]:&lt;/div&gt;
 &lt;div class="output_text output_subarea output_execute_result"&gt;
-&lt;pre&gt;[&lt;matplotlib.text.text at 0x110b9ea58&gt;,
- &lt;matplotlib.text.text at 0x110bc0208&gt;,
- &lt;matplotlib.text.text at 0x11078f6a0&gt;]&lt;/pre&gt;
+&lt;pre&gt;[&lt;matplotlib.text.text at 0x111698a90&gt;,
+ &lt;matplotlib.text.text at 0x111645160&gt;,
+ &lt;matplotlib.text.text at 0x111756be0&gt;]&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="output_area"&gt;
@@ -2841,7 +2857,7 @@ EREJAxVdIiIiImHwP24JMFW85IgSAAAAAElFTkSuQmCC
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [647]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [688]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ax&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subplots&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
@@ -2857,11 +2873,11 @@ EREJAxVdIiIiImHwP24JMFW85IgSAAAAAElFTkSuQmCC
 &lt;div class="output_wrapper"&gt;
 &lt;div class="output"&gt;
 &lt;div class="output_area"&gt;
-&lt;div class="prompt output_prompt"&gt;Out[647]:&lt;/div&gt;
+&lt;div class="prompt output_prompt"&gt;Out[688]:&lt;/div&gt;
 &lt;div class="output_text output_subarea output_execute_result"&gt;
-&lt;pre&gt;[&lt;matplotlib.text.text at 0x110378438&gt;,
- &lt;matplotlib.text.text at 0x110399128&gt;,
- &lt;matplotlib.text.text at 0x110e6c978&gt;]&lt;/pre&gt;
+&lt;pre&gt;[&lt;matplotlib.text.text at 0x111690780&gt;,
+ &lt;matplotlib.text.text at 0x1117e8be0&gt;,
+ &lt;matplotlib.text.text at 0x11191e198&gt;]&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="output_area"&gt;
@@ -3569,7 +3585,7 @@ J0WoEEIIIYSwOSlChRBCCCGEzUkRKoQQQgghbO7/AbHJ3owc18eSAAAAAElFTkSuQmCC
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [650]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [689]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;fig&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ax&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subplots&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
@@ -3585,11 +3601,11 @@ J0WoEEIIIYSwOSlChRBCCCGEzUkRKoQQQgghbO7/AbHJ3owc18eSAAAAAElFTkSuQmCC
 &lt;div class="output_wrapper"&gt;
 &lt;div class="output"&gt;
 &lt;div class="output_area"&gt;
-&lt;div class="prompt output_prompt"&gt;Out[650]:&lt;/div&gt;
+&lt;div class="prompt output_prompt"&gt;Out[689]:&lt;/div&gt;
 &lt;div class="output_text output_subarea output_execute_result"&gt;
-&lt;pre&gt;[&lt;matplotlib.text.text at 0x1111c5d30&gt;,
- &lt;matplotlib.text.text at 0x111056208&gt;,
- &lt;matplotlib.text.text at 0x11128b320&gt;]&lt;/pre&gt;
+&lt;pre&gt;[&lt;matplotlib.text.text at 0x111a1d5f8&gt;,
+ &lt;matplotlib.text.text at 0x11196eac8&gt;,
+ &lt;matplotlib.text.text at 0x111af3a90&gt;]&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="output_area"&gt;
@@ -3991,64 +4007,13 @@ AABJRU5ErkJggg==
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [656]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [657]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Adding release year to dataframe&lt;/span&gt;
-&lt;span class="n"&gt;highest_revenue_ever_df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'year'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DatetimeIndex&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;highest_revenue_ever_df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'release_date'&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;year&lt;/span&gt;
-&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;highest_revenue_ever_df&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;# highest_revenue_ever_df['year'] = pd.DatetimeIndex(highest_revenue_ever_df['release_date']).year&lt;/span&gt;
+&lt;span class="c1"&gt;# print(highest_revenue_ever_df)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;
-&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
-&lt;pre&gt;                                             film     revenue      budget  \
-0                                          Avatar  2781505847  -237000000   
-1                    Star Wars: The Force Awakens  2068223624  -245000000   
-2                                         Titanic  1845034188  -200000000   
-3                                    The Avengers  1519557910  -220000000   
-4                                  Jurassic World  1513528810  -150000000   
-5                                       Furious 7  1506249360  -190000000   
-6                         Avengers: Age of Ultron  1405035767  -280000000   
-7    Harry Potter and the Deathly Hallows: Part 2  1342000000  -125000000   
-8                                          Frozen  1274219009  -150000000   
-9                            Beauty and the Beast  1221782049  -160000000   
-10                                     Iron Man 3  1215439994  -200000000   
-11                        The Fate of the Furious  1212583865  -250000000   
-12                                        Minions  1156730962   -74000000   
-13                     Captain America: Civil War  1153304495  -250000000   
-14                 Transformers: Dark of the Moon  1123746996  -195000000   
-15  The Lord of the Rings: The Return of the King  1118888979   -94000000   
-16                                        Skyfall  1108561013  -200000000   
-17                Transformers: Age of Extinction  1091405097  -210000000   
-18                          The Dark Knight Rises  1084939099  -250000000   
-
-   release_date       gross  year  
-0    2009-12-10  2544505847  2009  
-1    2015-12-15  1823223624  2015  
-2    1997-11-18  1645034188  1997  
-3    2012-04-25  1299557910  2012  
-4    2015-06-09  1363528810  2015  
-5    2015-04-01  1316249360  2015  
-6    2015-04-22  1125035767  2015  
-7    2011-07-07  1217000000  2011  
-8    2013-11-27  1124219009  2013  
-9    2017-03-16  1061782049  2017  
-10   2013-04-18  1015439994  2013  
-11   2017-04-12   962583865  2017  
-12   2015-06-17  1082730962  2015  
-13   2016-04-27   903304495  2016  
-14   2011-06-28   928746996  2011  
-15   2003-12-01  1024888979  2003  
-16   2012-10-25   908561013  2012  
-17   2014-06-25   881405097  2014  
-18   2012-07-16   834939099  2012  
-&lt;/pre&gt;
-&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -4058,7 +4023,7 @@ AABJRU5ErkJggg==
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Limitations"&gt;Limitations&lt;a class="anchor-link" href="#Limitations"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The above data and graphs do not account for inflation (the API returns by revenue unadjusted by inflation) therefore the earnings from more recent films are more weighted than their earlier counterparts. When looking at &lt;em&gt;all time&lt;/em&gt; data inflation should be adjusted for however when looking over a shorter time period adjusting for inflation might not be necessary. Older films would appear above if inflation was taken into account, as it is now, the oldest film on this list was &lt;em&gt;The Titanic&lt;/em&gt; in 1997.&lt;/p&gt;
+&lt;h3 id="Limitations"&gt;Limitations&lt;a class="anchor-link" href="#Limitations"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The above data and graphs do not account for inflation (the TMDB API returns by revenue unadjusted by inflation) therefore the earnings from more recent films are more weighted than their earlier counterparts. When looking at &lt;em&gt;all time&lt;/em&gt; data inflation should be adjusted for however when looking over a shorter time period adjusting for inflation might not be necessary. Older films would appear above if inflation was taken into account, as it is now, the oldest film on this list was &lt;em&gt;The Titanic&lt;/em&gt; in 1997.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;

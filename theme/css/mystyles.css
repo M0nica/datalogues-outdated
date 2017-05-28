@@ -12,3 +12,8 @@ div.input_prompt {
 /*.post-content a {
     border-bottom: 0px solid #f26a3d;
 }*/
+
+/* remove blank output lines from matplotlib */
+.output_text.output_subarea.output_execute_result {
+    display: none;
+}
