@@ -36,8 +36,32 @@ SOCIAL = (
         ('GitHub', 'https://github.com/M0nica'),
           )
 
-DEFAULT_PAGINATION = 10
+# Pagination
+DEFAULT_PAGINATION = 3
+PAGINATION_PATTERNS = (
+    (1, '{base_name}/', '{base_name}/index.html'),
+    (2, '{base_name}/page/{number}/', '{base_name}/page/{number}/index.html'),
+)
 
+
+# Post and Pages path
+PAGE_URL = 'pages/{slug}/'
+PAGE_SAVE_AS = 'pages/{slug}/index.html'
+YEAR_ARCHIVE_SAVE_AS = '{date:%Y}/index.html'
+MONTH_ARCHIVE_SAVE_AS = '{date:%Y}/{date:%m}/index.html'
+
+# Tags and Category path
+CATEGORY_URL = 'category/{slug}'
+CATEGORY_SAVE_AS = 'category/{slug}/index.html'
+CATEGORIES_SAVE_AS = 'catgegories.html'
+TAG_URL = 'tag/{slug}'
+TAG_SAVE_AS = 'tag/{slug}/index.html'
+TAGS_SAVE_AS = 'tags.html'
+
+# Author
+AUTHOR_URL = 'author/{slug}'
+AUTHOR_SAVE_AS = 'author/{slug}/index.html'
+AUTHORS_SAVE_AS = 'authors.html'
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
@@ -45,7 +69,7 @@ DEFAULT_PAGINATION = 10
 MARKUP = ('md', 'ipynb')
 
 PLUGIN_PATHS = ['./plugins']
-PLUGINS = ['ipynb.markup', 'neighbors']
+PLUGINS = ['ipynb.markup', 'neighbors', 'sitemap']
 # old plugin ==> ,'minchin.pelican.plugins.cname'
 
 # pelican will ignore ipynb checkpoints
@@ -63,6 +87,7 @@ THEME = "../pelican-themes/attila"
 
 
 # THEME = 'themes/bootstrap2'
+
 STATIC_PATHS = ['images', 'pdfs',  'extra/CNAME']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
 
@@ -81,4 +106,19 @@ AUTHORS_BIO = {
   "location": "New York City",
   "bio": "I am a web developer who enjoys tinkering with data and is passionate about making the Internet more enjoyable."
   }
+}
+
+# Sitemap
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.5,
+        'indexes': 0.5,
+        'pages': 0.5
+    },
+    'changefreqs': {
+        'articles': 'monthly',
+        'indexes': 'daily',
+        'pages': 'monthly'
+    }
 }

@@ -17,6 +17,11 @@ RELATIVE_URLS = False
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 
+
+# analytics
+
+GOOGLE_ANALYTICS = "UA-35456405-4"
+
 DELETE_OUTPUT_DIRECTORY = True
 
 # Following items are often useful when publishing

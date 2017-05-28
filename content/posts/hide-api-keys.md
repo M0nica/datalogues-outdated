@@ -1,7 +1,7 @@
 Title: How to Hide Your API Keys in Python
 Date: 2017-05-27 10:20
 Category: tutorials
-Tags:  GitHub
+Tags:  GitHub, API
 Slug: hide-api-keys
 Authors: Monica Powell
 Summary: If you plan on programming any applications and storing your code in a public GitHub repository then it is important that you protect your API keys by ensuring that they are not searchable or otherwise publicly accessible.

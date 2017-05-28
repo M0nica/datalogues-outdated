@@ -1,0 +1,14 @@
+div.input_prompt {
+    display: none;
+  }
+
+
+  div.output_prompt {
+      display: none;
+    }
+
+
+/* remove wierd black and orange double line when links are in Jupyter notebook*/
+/*.post-content a {
+    border-bottom: 0px solid #f26a3d;
+}*/
