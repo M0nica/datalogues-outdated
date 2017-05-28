@@ -17,3 +17,10 @@ div.input_prompt {
 .output_text.output_subarea.output_execute_result {
     display: none;
 }
+
+/* helps images appear more center aligned -- works on graphs but not on images */
+
+/*.post-content img {
+
+    margin-left: 5%;
+}*/
