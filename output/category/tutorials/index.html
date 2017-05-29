@@ -41,17 +41,22 @@
 
       <meta property="og:locale" content="" />
     <meta property="og:site_name" content="Datalogues" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Datalogues" />
-    <meta property="og:description" content="View the blog." />
-    <meta property="og:url" content="http://datalogues.com" />
-      <meta name="og:image" content="http://datalogues.com/theme/images/post-bg.jpg">
-      <meta name="twitter:card" content="summary_large_image">
-      <meta name="twitter:site" content="@waterproofheart">
-      <meta name="twitter:title" content="Datalogues">
-      <meta name="twitter:description" content="View the blog.">
-      <meta name="twitter:url" content="http://datalogues.com">
-          <meta name="twitter:image:src" content="http://datalogues.com/theme/images/post-bg.jpg">
+
+
+
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Datalogues" />
+      <meta property="og:description" content="View the blog." />
+      <meta property="og:url" content="http://datalogues.com" />
+        <meta name="og:image" content="http://datalogues.com/theme/images/post-bg.jpg">
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@waterproofheart">
+        <meta name="twitter:title" content="Datalogues">
+        <meta name="twitter:description" content="View the blog.">
+        <meta name="twitter:url" content="http://datalogues.com">
+            <meta name="twitter:image:src" content="http://datalogues.com/theme/images/post-bg.jpg">
+
 </head>
 <!-- TODO : Body class -->
 <body class="home-template">
@@ -61,6 +66,8 @@
   <div class="nav-wrapper">
     <p class="nav-label">Menu</p>
     <ul>
+          <li><a href="/pages/about" role="presentation">About</a></li>
+          <li><a href="/" role="presentation">Blog</a></li>
 
 
     </ul>
@@ -100,7 +107,7 @@
 
         <article class="post">
         <div class="inner">
-            <header class="post-header">         
+            <header class="post-header">
                 <h2 class="post-title"><a href="http://datalogues.com/hide-api-keys.html" rel="bookmark" title="Permalink to How to Hide Your API Keys in Python">How to Hide Your API Keys in Python</a>
                 </h2>
                 <span class="post-meta">
@@ -114,11 +121,15 @@
                         If you plan on programming any applications and storing your code in a public GitHub repository then it is important that you protect your API keys by ensuring that they are not searchable or otherwise publicly accessible.
                     </p>
                 </section>
+            <!-- <p>
+  <a data-disqus-identifier="/hide-api-keys.html" href="http://datalogues.com/hide-api-keys.html#disqus_thread">comments</a>
+</p>
+ -->
             </div>
         </article>
         <article class="post">
         <div class="inner">
-            <header class="post-header">         
+            <header class="post-header">
                 <h2 class="post-title"><a href="http://datalogues.com/change-github-repo-language.html" rel="bookmark" title="Permalink to How to Change Repo Language in GitHub">How to Change Repo Language in GitHub</a>
                 </h2>
                 <span class="post-meta">
@@ -132,6 +143,10 @@
                         GitHub has a linguist library that auto-detects the language within every repository. Upon researching how to resolve GitHub misclassifying the language of your projects I found out the solution is as simple as telling GitHub which files to ignore.
                     </p>
                 </section>
+            <!-- <p>
+  <a data-disqus-identifier="/change-github-repo-language.html" href="http://datalogues.com/change-github-repo-language.html#disqus_thread">comments</a>
+</p>
+ -->
             </div>
         </article>
 
@@ -169,5 +184,14 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
     </script>
+<script type="text/javascript">
+    var disqus_shortname = 'datalogues';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
 </body>
 </html>

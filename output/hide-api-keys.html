@@ -51,11 +51,11 @@
 
         <meta property="og:locale" content="" />
     <meta property="og:site_name" content="Datalogues" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Datalogues" />
-    <meta property="og:description" content="View the blog." />
-    <meta property="og:url" content="http://datalogues.com" />
-      <meta name="og:image" content="http://datalogues.com/theme/images/post-bg.jpg">
+
+
+      <!-- skip meta tags here and use the article.html specific ones
+      - facebook and google will ignore second set of og:meta tags
+    -->
 
   <meta property="og:type" content="article">
             <meta property="article:author" content="http://datalogues.com/author/monica-powell">
@@ -73,6 +73,7 @@
             <meta name="twitter:image:src" content="http://datalogues.com/images/jquery-screenshot.jpg">
 
             <meta name="twitter:description" content="If you plan on programming any applications and storing your code in a public GitHub repository then it is important that you protect...">
+
 </head>
 <!-- TODO : Body class -->
 <body class="home-template">
@@ -82,6 +83,8 @@
   <div class="nav-wrapper">
     <p class="nav-label">Menu</p>
     <ul>
+          <li><a href="/pages/about" role="presentation">About</a></li>
+          <li><a href="/" role="presentation">Blog</a></li>
 
 
     </ul>
@@ -131,8 +134,7 @@ publicly accessible.</p>
 <h4>What’s an API?</h4>
 <p>An application programming interface (API) is a structured set of instructions
 for building applications. If you want to leverage data from services such as
-Twitter, The New York Times, <a href="https://medium.com/@slackhq">Slack</a>,
-<a href="https://medium.com/@Spotify">Spotify</a>, etc. then you should read their APIs to
+Twitter, The New York Times, Slack, Spotify etc. then you should read their APIs to
 figure out how to structure your queries to receive data from their service or
 to post on their service.</p>
 <h4>What are API keys?</h4>
@@ -191,7 +193,7 @@ Diva</a>*.</p>
 
             <section class="post-info">
                 <div class="post-share">
-                    <a class="twitter" href="https://twitter.com/share?text=How to Hide Your API Keys in Python&amp;url=http://datalogues.com/hide-api-keys.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <a class="twitter" href="https://twitter.com/share?text=How to Hide Your API Keys in Python&amp;via=waterproofheart&amp;url=http://datalogues.com/hide-api-keys.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                     <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
                     </a>
                     <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://datalogues.com/hide-api-keys.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
@@ -214,22 +216,35 @@ Diva</a>*.</p>
                         </figure>
                     <div class="post-author-bio">
                         <h4 class="post-author-name"><a href="http://datalogues.com/author/monica-powell">Monica Powell</a></h4>
-                            <p class="post-author-about">I am a web developer who enjoys tinkering with data and is passionate about making the Internet more enjoyable.</p>
+                            <p class="post-author-about">I am a web developer who enjoys exploring data with Python. I'm passionate about making the Internet more enjoyable and was awarded a GIRLBOSS Foundation Grant by Sophia Amorusu for making technology more accessible for women. <br>  Feel free to tweet me at <a href='http://twitter.com/waterproofheart'>@waterproofheart</a> to discuss data visualization, web development or #BlackGirlMagic.</p>
                             <span class="post-author-location"><i class="ic ic-location"></i> New York City</span>
                             <span class="post-author-website"><a href="http://www.aboutmonica.com"><i class="ic ic-link"></i> Website</a></span>
+                            <span class="post-author-twitter"><a target="_blank" href="https://twitter.com/waterproofheart"><i class="ic ic-twitter"></i> Twitter</a></span>
+                            <span class="post-author-website"><a href="http://www.github.com/m0nica"><i class="ic ic-link"></i> GitHub</a></span>
                     </div>
                     <div class="clear"></div>
                 </aside>
 
                 </section>
 
+                <script type="text/javascript">
+                    var disqus = 'datalogues';
+                    var disqus_shortname = 'datalogues';
+                    var disqus_identifier = '/hide-api-keys.html';
+                    var disqus_url = 'http://datalogues.com/hide-api-keys.html';
+                </script>
+                <noscript>Please enable JavaScript to view the comments.</noscript>
+                <section class="post-comments">
+                        <a id="show-disqus" class="post-comments-activate" data-disqus-identifier="/hide-api-keys.html" >Show Comments</a>
+                    <div id="disqus_thread"></div>
+                </section>
 
                 <aside class="post-nav">
-                    <a class="post-nav-next" href="http://datalogues.com/tmdb-api.html">
+                    <a class="post-nav-next" href="http://datalogues.com/tmdb-api-tutorial.html">
                         <section class="post-nav-teaser">
                             <i class="ic ic-arrow-left"></i>
-                                <h2 class="post-nav-title">Using the TMDB API to Find Films with the Highest Revenue</h2>
-                            <p class="post-nav-excerpt">Get Out has been one of the most talked about films in 2017 and as of April 2017 was...</p>
+                                <h2 class="post-nav-title">How to Use the TMDB API to Find Films with the Highest Revenue</h2>
+                            <p class="post-nav-excerpt">Get Out has been one of the most talked about films in 2017 and as of April 2017 the...</p>
                         </section>
                     </a>
                     <a class="post-nav-prev" href="http://datalogues.com/import-data-pandas.html">
@@ -271,5 +286,14 @@ Diva</a>*.</p>
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
     </script>
+<script type="text/javascript">
+    var disqus_shortname = 'datalogues';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
 </body>
 </html>

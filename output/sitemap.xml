@@ -5,28 +5,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://datalogues.com/</loc>
-<lastmod>2017-05-27T23:29:15-00:00</lastmod>
+<lastmod>2017-05-29T11:18:53-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://datalogues.com/archives.html</loc>
-<lastmod>2017-05-27T23:29:15-00:00</lastmod>
+<lastmod>2017-05-29T11:18:53-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://datalogues.com/tags.html</loc>
-<lastmod>2017-05-27T23:29:15-00:00</lastmod>
+<lastmod>2017-05-29T11:18:53-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://datalogues.com/tmdb-api.html</loc>
-<lastmod>2017-05-27T10:30:00-04:00</lastmod>
+<loc>http://datalogues.com/pages/about/</loc>
+<lastmod>2017-05-27T10:20:00-04:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://datalogues.com/tmdb-api-tutorial.html</loc>
+<lastmod>2017-05-28T09:30:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -54,7 +61,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://datalogues.com/category/snippets</loc>
-<lastmod>2017-05-27T10:30:00-04:56</lastmod>
+<lastmod>2017-05-20T10:30:00-04:56</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://datalogues.com/category/tutorial</loc>
+<lastmod>2017-05-28T09:30:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -68,21 +82,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://datalogues.com/tag/python</loc>
-<lastmod>2017-05-27T10:30:00-04:56</lastmod>
+<lastmod>2017-05-28T09:30:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://datalogues.com/tag/pandas</loc>
-<lastmod>2017-05-27T10:30:00-04:56</lastmod>
+<lastmod>2017-05-28T09:30:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://datalogues.com/tag/api</loc>
-<lastmod>2017-05-27T10:30:00-04:56</lastmod>
+<lastmod>2017-05-28T09:30:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -103,7 +117,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://datalogues.com/author/monica-powell</loc>
-<lastmod>2017-05-27T10:30:00-04:56</lastmod>
+<lastmod>2017-05-28T09:30:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

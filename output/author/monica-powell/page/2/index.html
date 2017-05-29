@@ -40,23 +40,28 @@
 
           <meta property="og:locale" content="" />
     <meta property="og:site_name" content="Datalogues" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Datalogues" />
-    <meta property="og:description" content="View the blog." />
-    <meta property="og:url" content="http://datalogues.com" />
-      <meta name="og:image" content="http://datalogues.com/theme/images/post-bg.jpg">
+
+
+
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Datalogues" />
+      <meta property="og:description" content="View the blog." />
+      <meta property="og:url" content="http://datalogues.com" />
+        <meta name="og:image" content="http://datalogues.com/theme/images/post-bg.jpg">
+
 
     <meta property="og:title" content="Datalogues - Articles by Monica Powell">
     <meta property="og:type" content="profile">
     <meta property="profile:first_name" content="Monica">
     <meta property="profile:last_name" content="Powell">
     <meta property="profile:username" content="monica-powell">
-      <meta name="twitter:card" content="summary_large_image">
-      <meta name="twitter:site" content="@waterproofheart">
-      <meta name="twitter:title" content="Datalogues">
-      <meta name="twitter:description" content="View the blog.">
-      <meta name="twitter:url" content="http://datalogues.com">
-          <meta name="twitter:image:src" content="http://datalogues.com/theme/images/post-bg.jpg">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@waterproofheart">
+        <meta name="twitter:title" content="Datalogues">
+        <meta name="twitter:description" content="View the blog.">
+        <meta name="twitter:url" content="http://datalogues.com">
+            <meta name="twitter:image:src" content="http://datalogues.com/theme/images/post-bg.jpg">
+
 </head>
 <!-- TODO : Body class -->
 <body class="home-template">
@@ -66,6 +71,8 @@
   <div class="nav-wrapper">
     <p class="nav-label">Menu</p>
     <ul>
+          <li><a href="/pages/about" role="presentation">About</a></li>
+          <li><a href="/" role="presentation">Blog</a></li>
 
 
     </ul>
@@ -95,9 +102,11 @@
                     </figure>
                 <div class="post-author-bio">
                     <h4 class="post-author-name"><a href="http://datalogues.com/author/monica-powell">Monica Powell</a></h4>
-                        <p class="post-author-about">I am a web developer who enjoys tinkering with data and is passionate about making the Internet more enjoyable.</p>
+                        <p class="post-author-about">I am a web developer who enjoys exploring data with Python. I'm passionate about making the Internet more enjoyable and was awarded a GIRLBOSS Foundation Grant by Sophia Amorusu for making technology more accessible for women. <br>  Feel free to tweet me at <a href='http://twitter.com/waterproofheart'>@waterproofheart</a> to discuss data visualization, web development or #BlackGirlMagic.</p>
                         <span class="post-author-location"><i class="ic ic-location"></i> New York City</span>
                         <span class="post-author-website"><a href="http://www.aboutmonica.com"><i class="ic ic-link"></i> Website</a></span>
+                        <span class="post-author-twitter"><a target="_blank" href="https://twitter.com/waterproofheart"><i class="ic ic-twitter"></i> Twitter</a></span>
+                        <span class="post-author-website"><a href="http://www.github.com/m0nica"><i class="ic ic-link"></i>GitHub</a></span>
                         <span class="post-author-stats"><i class="ic ic-posts"></i> 4  posts </span>
                 </div>
                 <div class="clear"></div>
@@ -123,7 +132,7 @@
 
         <article class="post">
         <div class="inner">
-            <header class="post-header">         
+            <header class="post-header">
                 <h2 class="post-title"><a href="http://datalogues.com/change-github-repo-language.html" rel="bookmark" title="Permalink to How to Change Repo Language in GitHub">How to Change Repo Language in GitHub</a>
                 </h2>
                 <span class="post-meta">
@@ -137,6 +146,10 @@
                         GitHub has a linguist library that auto-detects the language within every repository. Upon researching how to resolve GitHub misclassifying the language of your projects I found out the solution is as simple as telling GitHub which files to ignore.
                     </p>
                 </section>
+            <!-- <p>
+  <a data-disqus-identifier="/change-github-repo-language.html" href="http://datalogues.com/change-github-repo-language.html#disqus_thread">comments</a>
+</p>
+ -->
             </div>
         </article>
 
@@ -175,5 +188,14 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
     </script>
+<script type="text/javascript">
+    var disqus_shortname = 'datalogues';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
 </body>
 </html>

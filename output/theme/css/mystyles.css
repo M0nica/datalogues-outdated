@@ -12,3 +12,20 @@ div.input_prompt {
 /*.post-content a {
     border-bottom: 0px solid #f26a3d;
 }*/
+
+/* remove blank output lines from matplotlib */
+.output_text.output_subarea.output_execute_result {
+    display: none;
+}
+
+/* helps images appear more center aligned -- works on graphs but not on images */
+
+/*.post-content img {
+
+    margin-left: 5%;
+}*/
+
+/* change links in author bio to orange */
+/*.post-author-bio a {
+    color: #f26b3f;
+}*/

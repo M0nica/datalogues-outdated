@@ -21,8 +21,7 @@ publicly accessible.
 
 An application programming interface (API) is a structured set of instructions
 for building applications. If you want to leverage data from services such as
-Twitter, The New York Times, [Slack](https://medium.com/@slackhq),
-[Spotify](https://medium.com/@Spotify), etc. then you should read their APIs to
+Twitter, The New York Times, Slack, Spotify etc. then you should read their APIs to
 figure out how to structure your queries to receive data from their service or
 to post on their service.
 

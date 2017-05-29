@@ -1,8 +1,9 @@
-Title: Using the TMDB API to Find Films with the Highest Revenue
-Slug: tmdb-api
-Date: 2017-05-27 10:30
-Category: snippets
+Title: How to Use the TMDB API to Find Films with the Highest Revenue
+Slug: tmdb-api-tutorial
+Date: 2017-05-28 9:30
+Category: tutorial
 Tags: python, pandas, api
 Author: Monica Powell
-Summary: A quick guide to importing data into Pandas.
+Summary: A guide to using The Movie Database to programmatically get film information.
 header_cover: images/GetOut.png
+og_image:  images/GetOut.png

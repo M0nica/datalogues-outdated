@@ -94,7 +94,13 @@ EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
 OUTPUT_PATH = 'output'
 PATH = 'content'
 
+MENUITEMS = (
+    ('About', '/pages/about'),
+    ('Blog', '/')
+    )
 
+# Comments
+DISQUS_SITENAME = "datalogues"
 
 
 AUTHORS_BIO = {
@@ -103,8 +109,10 @@ AUTHORS_BIO = {
   "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Milky_Way_Arch.jpg/1920px-Milky_Way_Arch.jpg",
   "image": "http://www.aboutmonica.com/images/monicaheadshot-bw-circlet.png",
   "website": "http://www.aboutmonica.com",
+  "github": "http://www.github.com/m0nica",
+  "twitter": "waterproofheart",
   "location": "New York City",
-  "bio": "I am a web developer who enjoys tinkering with data and is passionate about making the Internet more enjoyable."
+  "bio": "I am a web developer who enjoys exploring data with Python. I'm passionate about making the Internet more enjoyable and was awarded a GIRLBOSS Foundation Grant by Sophia Amorusu for making technology more accessible for women. <br>  Feel free to tweet me at <a href='http://twitter.com/waterproofheart'>@waterproofheart</a> to discuss data visualization, web development or #BlackGirlMagic."
   }
 }
 
