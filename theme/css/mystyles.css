@@ -18,6 +18,12 @@ div.input_prompt {
     display: none;
 }
 
+/* padding around mailchimp form */ 
+div#mc_embed_signup {
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
 /* helps images appear more center aligned -- works on graphs but not on images */
 
 /*.post-content img {
@@ -28,4 +34,9 @@ div.input_prompt {
 /* change links in author bio to orange */
 /*.post-author-bio a {
     color: #f26b3f;
+}*/
+
+/* add gradient to home background */
+/*#homepagebg {
+    background: linear-gradient(45deg, #b30950 15%, #192740 85%);
 }*/
