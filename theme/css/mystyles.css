@@ -18,10 +18,20 @@ div.input_prompt {
     display: none;
 }
 
-/* padding around mailchimp form */ 
+/* padding around mailchimp form */
 div#mc_embed_signup {
     margin-top: 3em;
     margin-bottom: 3em;
+}
+
+/* color of icons */
+/* make location icon red */
+.ic-location:before {
+    color: #ba2121;
+}
+
+.ic-twitter:before {
+    color: #1DA1F2;
 }
 
 /* helps images appear more center aligned -- works on graphs but not on images */
